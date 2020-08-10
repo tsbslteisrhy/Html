@@ -11,148 +11,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/best.js">
     <script>
         $(document).ready(function(){
           $('.slider > ul').bxSlider({
               pager: false
-
           });
         });
     </script>
     <style>
-        /* 베스트 배너 */
-        aside > .best {
-            width: 215px;
-            height: auto;
-            border: 1px solid #dbdbdb;
-            box-sizing: border-box;
-            box-shadow: 0 0 5px rgba(55, 55, 5, 0.2);
-        }
 
-        aside > .best > h1 {
-            font-size: 14px;
-            font-weight: bold;
-            color: #111;
-            margin: 6px;
-        }
-        aside > .best > h1 > i {
-            margin-right: 6px;
-            font-size: 18px;
-        }
-
-        aside > .best > ol {
-            width: 100%;
-        }
-        aside > .best > ol > li {
-            width: 100%;
-            height: 100%;
-            padding: 0 6px;
-            box-sizing: border-box;
-            margin-bottom: 16px;
-        }
-
-        aside > .best > ol > li > a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        aside > .best > ol > li > a:hover h2 {
-            text-decoration: underline;
-        }
-
-        aside > .best > ol > li > a > .thumb {
-            float: left;
-            position: relative;
-            width: 50px;
-            height: 50px;
-            overflow: hidden;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-
-        
-        aside > .best > ol > li:first-child > a > .thumb {
-            position: relative;
-            float: none;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-        aside > .best > ol > li > a > .thumb > i {
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: inline-block;
-            width: 16px;
-            height: 20px;
-            font-size: 16px;
-            padding: 0;
-            color: #ef3e42;
-            border-bottom: 1px solid #ef3e42;
-            font-weight: 500;
-            font-style: italic;
-            text-align: center;
-            line-height: 18px;
-        }
-
-        aside > .best > ol > li:first-child > a > .thumb > i {
-            width: 35px;
-            height: 26px;  
-        }
-        
-        .best > ol > li > a > .thumb > img {
-            width: 100%;
-        }
-
-        aside > .best > ol > li > a > article {
-            float: left;
-            width: 148px;
-            padding-left: 6px;
-            box-sizing: border-box;
-        }
-
-        aside > .best > ol > li > a h2 {
-            margin-top: 4px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        aside > .best > ol > li > a .org_price {}
-        aside > .best > ol > li > a .org_price > del::after {content: "원";}
-        aside > .best > ol > li > a .org_price > ins::after {content: "원";}
-        aside > .best > ol > li > a .org_price > del {
-            font-size: 10px;
-            color: #aaa;
-        }
-        aside > .best > ol > li > a .org_price > span {
-            color: #eb000a;
-            font-size: 10px;
-        }
-        aside > .best > ol > li > a .org_price > span::after { content: "↓"; }
-        aside > .best > ol > li > a .dis_price {}
-        aside > .best > ol > li > a .dis_price > ins {
-            font-size: 14px;
-            text-decoration: none;
-        }
-        aside > .best > ol > li > a .dis_price > ins::after { content: "원"; }
-        aside > .best > ol > li > a .dis_price > span {
-            display: inline-block;
-            font-size: 0;
-            vertical-align: text-bottom;
-            width: 55px;
-            height: 13px;
-            background: url('./img/ico_freeshipping.gif') no-repeat;
-        }
     </style>
     <script>
         $(function(){
-
             var best = $('aside > .best');
-
             $(window).scroll(function(){
-
                 var t = $(this).scrollTop();
                 
                 if(t > 620) {
@@ -165,7 +38,6 @@
                 }
 
             });
-
         });
     </script>
 </head>
