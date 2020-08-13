@@ -370,3 +370,106 @@ footer p > strong {
 }
 
 #member-register > form > div {}
+
+/* register-seller */
+#seller-register {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+#seller-register > a {}
+#seller-register > h1 {
+    padding-left: 10px;
+    margin-bottom: 24px;
+    font-size: 26px;
+    border-bottom: 2px solid #000;
+    margin-top: 30px;
+}
+
+#seller-register > form {}
+#seller-register > form > section {}
+
+#seller-register table {
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    border-top: 1px solid #b6bdc7;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#seller-register table > caption {
+    text-align: left;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+#seller-register > form > section > table tr {}
+#seller-register table th {
+    width: 200px;
+    padding: 20px 20px;
+    vertical-align: top;
+    background: #f4f6f9;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.4;
+    border-bottom: 1px solid #dfe5ed;
+    word-break: break-word;
+    font-size: 14px;
+}
+#seller-register table .essential {
+    color: #ef3f43;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+#seller-register > form > section > table tr > th > span {}
+
+#seller-register table td {
+    position: relative;
+    vertical-align: middle;
+    padding: 10px 20px;
+    text-align: left;
+    line-height: 1.4;
+    border-bottom: 1px solid #dfe5ed;
+    word-break: break-word;
+    font-size: 14px;
+    font-weight: 500;
+}
+#seller-register table input {
+    padding: 0 8px;
+    height: 31px;
+    font-size: 14px;
+    border: 1px solid #dfe5ed;
+    vertical-align: middle;
+}
+#seller-register > form > section > table tr > td > span {}
+#seller-register table label {
+    display: inline-block;
+    width: 60px;
+    font-size: 17px;
+}
+
+#seller-register table .addr th {
+    padding-left: 30px;
+}
+#seller-register table .addr input {
+    margin-top: 6px;
+}
+
+#seller-register > form > section > table tr > td > div {}
+#seller-register > form input[type=submit] {
+    display: block;
+    background: #ef3f43;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 72px;
+    margin: 40px auto;
+    border: 0;
+    outline: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#seller-register > form > div {}

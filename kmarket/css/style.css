@@ -502,7 +502,6 @@ h5.rating.star5 {background-position: 0 -200px;}
 }
 
 /* list 페이지 */
-
 #list {
     padding: 16px;
     box-sizing: border-box;
@@ -1324,9 +1323,371 @@ h5.rating.star5 {background-position: 0 -200px;}
     margin-top: 10px;
 }
 
+/* 주문완료 페이지 */
+#order-complete {}
+
+#order-complete > section > div > h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+    padding: 10px;
+}
+#order-complete > section > div > h2 > i {
+    font-size: 26px;
+}
+#order-complete > section > div > p {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+#order-complete > section > section > article {
+    margin-top: 16px;
+}
+#order-complete > section > section > article > h1 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #111;
+    padding: 6px 0;
+}
+#order-complete table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 2px solid #000;
+}
+#order-complete table tr {
+    border-bottom: 1px solid #d3d3d3;
+}
+#order-complete table tr > th {
+    padding: 12px 0;
+    background: #fff;
+    color: #383838;
+    font-size: 0.95em;
+    text-align: center;
+    letter-spacing: -0.1em;
+}
 
 
+#order-complete .product {}
+#order-complete .product table tr > td {
+    text-align: center;
+}
+#order-complete .product table tr > td > article {
+    overflow: hidden;
+}
+#order-complete .product table tr > td img {
+    float: left;
+    width: 80px;
+}
+#order-complete .product table tr > td div {
+    float: left;
+    margin-top: 10px;
+    text-align: left;
+}
+#order-complete .product table tr > td:last-child {
+    color: #ff006c;
+    font-weight: bold;
+    text-align: right;
+}
 
+#order-complete .product .total > td > table {border: none;}
+#order-complete .product .total > td > table tr {border: none;}
+#order-complete .product .total > td > table td {
+    text-align: right;
+    color: #111;
+    background: #f2f2f2;
+    font-weight: normal;
+    border-bottom: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#order-complete .product .total > td > table tr:last-child span {
+    font-weight: bold;
+    color: #ff006c;
+}
+
+#order-complete .orde {}
+#order-complete .order table {}
+#order-complete .order table tr {}
+#order-complete .order table tr > td {
+    padding: 10px;
+    box-sizing: border-box;
+}
+#order-complete .order table tr > td:nth-child(1) {
+    width: 160px;
+    background: #f2f2f2;
+}
+#order-complete .order table tr > td:nth-child(2) {
+    width: auto;
+}
+#order-complete .order table tr > td:nth-child(3) {
+    width: 100px;
+    text-align: right;
+    vertical-align: top;
+    background: #f2f2f2;
+}
+#order-complete .order table tr > td:nth-child(4) {
+    width: 100px;
+    text-align: right;
+    vertical-align: top;
+    background: #f2f2f2;
+}
+#order-complete .order table span {
+    font-weight: bold;
+    color: #ff006c;
+}
+
+#order-complete .delivery {}
+#order-complete .delivery table {}
+#order-complete .delivery table tr > td {
+    padding: 10px;
+    box-sizing: border-box;
+}
+#order-complete .delivery table tr > td:nth-child(1) {
+    width: 160px;
+    background: #f2f2f2;
+}
+#order-complete .delivery table tr > td:nth-child(2) {}
+#order-complete .delivery table tr > td:nth-child(3) {
+    width: 200px;
+    background: #f2f2f2;
+}
+
+#order-complete .alert {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 10px;
+    padding-left: 24px;
+    color: #999;
+    box-sizing: border-box;
+}
+#order-complete .alert > h1 {
+    margin-left: -12px;
+}
+#order-complete .alert > ul {
+    list-style: inherit;
+}
+#order-complete .alert > ul > li {
+    line-height: 20px;
+}
+#order-complete .alert > ul > li > span {
+    position: relative;
+    left: -6px;
+}
+
+/* 검색 페이지 */
+#search {
+    float: right;
+    width: 985px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#search > .detail_search {
+    width: 100%;
+    margin: 16px 0 0;
+    border: 1px solid #d7d7d7;
+}
+#search > .detail_search > h3 {
+    border-bottom: 1px solid #d7d7d7;
+    color: #777;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 10px 15px;
+}
+#search > .detail_search > h3 > strong {
+    color: #d50c0d;
+    font-size: 18px;
+    margin-right: 6px;
+}
+#search > .detail_search > h3 > em {
+    color: #888;
+    font-size: 14px;
+}
+#search > .detail_search > h3 span {
+    color: #d50c0d;
+}
+
+#search > .detail_search > form {
+    border-bottom: 1px solid #d7d7d7;
+    padding: 10px 15px;
+}
+#search > .detail_search > form > input[type=text] {
+    height: 30px;
+    border: 1px solid #bbb;
+    padding: 0 10px;
+}
+#search > .detail_search > form > input[type=submit] {
+    height: 32px;
+    padding: 0 5px;
+    font-weight: bold;
+    background: #d50c0c;
+    color: #fff;
+    border: 0;
+}
+
+#search > .detail_search > form > span {
+    float: right;
+    margin-top: 0;
+}
+#search > .detail_search > form > span > label {
+    margin-right: 10px;
+}
+
+#search > .detail_search > form > span > input {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #bbb;
+    padding: 0 10px;
+}
+
+#search > .detail_search > .info {
+    padding: 15px;
+    background: #f5f5f5;
+    color: #737373;
+}
+
+#search > .sort {
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #dfdfdf;
+    overflow: hidden;
+}
+#search > .sort > li {
+    float: left;
+    position: relative;
+    padding: 15px 0;
+    line-height: 15px;
+}
+#search > .sort > li > a{
+    display: block;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+}
+
+#search > section > article {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #ececec;
+}
+
+#search > section > article > ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#search > section > article > ul > li {
+    position: relative;
+    float: left;
+    height: 100%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+#search > section > article > ul > li:nth-child(1) {width: 20%; padding: 0;}
+#search > section > article > ul > li:nth-child(2) {width: 40%;}
+#search > section > article > ul > li:nth-child(3) {width: 20%;}
+#search > section > article > ul > li:nth-child(4) {width: 20%;}
+
+#search > section > article .thumb {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#search > section > article .thumb > img {width: 100%;}
+
+#search > section > article .name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+#search > section > article .desc > a {
+    font-size: 12px;
+    color: #333;
+}
+#search > section > article .desc > a:hover {
+    text-decoration: underline;
+}
+
+#search > section > article .org_price > del::after {content: "원";}
+#search > section > article .org_price > ins::after {content: "원";}
+#search > section > article .org_price > del {
+    font-size: 12px;
+    color: #aaa;
+}
+#search > section > article .org_price > span {
+    color: #eb000a;
+    font-size: 10px;
+}
+#search > section > article .org_price > span::after {content: "↓";}
+#search > section > article .dis_price > ins {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#search > section > article .dis_price > ins::after {content: "원";}
+#search > section > article span.freeshipping {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: text-bottom;
+    width: 55px;
+    height: 13px;
+    background: url('../img/ico_freeshipping.gif'), no-repeat;
+    margin-top: 4px;
+}
+
+#search > section > article .seller {
+    color: #444;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+#search > section > article .rating {
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+}
+
+#search > .paging {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+#search > .paging > span > a {
+    color:#777;
+    font-size: 11px;
+    letter-spacing: -1px;
+}
+#search > .paging > span > a:hover {
+    text-decoration: underline;
+}
+
+#search > .paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 2px;
+    padding: 8px 9px;
+    border: 1px solid #c4c4c4;
+    background: url() 0 0 repeat-x;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+#search > .paging > .num > a:hover {
+    border: 1px solid #454c5f;
+    text-decoration: none;
+}
+#search > .paging > .num > a.on {
+    color: #fe434c;
+    font-weight: bold;
+}
 
 
 /* 푸터영역 */
