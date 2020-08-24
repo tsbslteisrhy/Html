@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTTVING | 오늘의 노는 법</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        
+        
+        main {}
+        main > section {
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid blue;
+        }
+        main > section > .slider {
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+
+        main > section > .nav {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        main > section > .nav > ul {}
+        main > section > .nav > ul > li {
+            display: inline-block;
+        }
+        main > section > .nav > ul > li > a {
+            font-size: 16px;
+        }
+        main > section > .nav > ul > li:first-child > a {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        main > section > .main-vod-thumb {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        main > section > .main-vod-thumb > div {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 50px;
+            box-sizing: border-box;
+        }
+        main > section > .main-vod-thumb > ul {
+            padding-left: 100px;
+            display: inline;
+        }
+        main > section > .main-vod-thumb > ul > li {
+            display: inline-block;
+            width: 200px;
+            padding: 5px;
+        }
+        main > section > .main-vod-thumb > ul > li > div {}
+        main > section > .main-vod-thumb > ul > li > div > a {}
+        main > section > .main-vod-thumb > ul > li >div > a > img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        footer {
+            width: 100%;
+            height: 300px;
+            border: 1px solid red;
+        }
+       
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.slider .slider-item').bxSlider({
+                pager: false
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#">홍길동</a>
+                    <a href="#">이용권</a>
+                    <a href="#">편성표</a>
+                    <a href="#">위시리스트</a>
+                </div>
+            </div>
+            <div class="gnb">
+                <div>
+                    <h1><a href="#">OTTVING</a></h1>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">LIVE</a></li>
+                            <li><a href="#">VOD</a></li>
+                            <li><a href="#">MOVIE</a></li>
+                        </ul>
+                    </div>
+                    <form action="#">
+                        <input type="text" name="search" value="검색">
+                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <!-- 슬라이더 -->
+                <section class="slider">
+                    <div class="slider-item">
+                        <a href="#">
+                            <img src="./img/slider_01.png" alt="slider01">
+                            <span class="slider_info">
+                                <span class="sub">전율의 시작 시즌1 무료 정주행</span>
+                            </span>
+                        </a>
+                    
+                        <a href="#">
+                            <img src="./img/slider_02.png" alt="slider02">
+                            <span class="slider_info">
+                                <span class="title">이때다 싶어 모아본 린다G 시크릿!</span>
+                                <span class="sub"><오프더레코드>,<골든12>까지!</span>
+                            </span>
+                        </a>
+                    
+                        <a href="#">
+                            <img src="./img/slider_03.png" alt="slider03">
+                            <span class="slider_info">
+                                <span class="title">극장 동시 상영작</span>
+                                <span class="sub">영화관에 갈 수 없다면 지금 당장 티빙에서!</span>
+                            </span>
+                        </a>
+                    
+                        <a href="#">
+                            <img src="./img/slider_04.png" alt="slider04">
+                            <span class="slider_info">
+                                <span class="title">극장 동시 상영작</span>
+                                <span class="sub"><그냥 사랑하는 사이> 정주행하러 우리집 가자 ♨</span>
+                            </span>
+                        </a>
+                    
+                        <a href="#">
+                            <img src="./img/slider_05.png" alt="slider05">
+                            <span class="slider_info">
+                                <span class="sub">디즈니 영화 보고 캠핑체어도 받고♬</span>
+                            </span>
+                        </a>
+                    </div>
+
+                    
+                    
+                </section>
+
+                <!-- 메인화면 콘텐츠 카테고리 : 시청 중 콘텐츠 -->
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">시청 중 콘텐츠 | </a></li>
+                        <li><a href="#">위시 콘텐츠 | </a></li>
+                        <li><a href="#">인기 콘텐츠 | </a></li>
+                        <li><a href="#">최신 콘텐츠 | </a></li>
+                        <li><a href="#">추천 콘텐츠</a></li>
+                    </ul>
+                </div>
+
+                <div class="main-vod-thumb">
+                    <div>VOD</div>
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_vod_thumb_01.jpg" alt="thumb01">
+                                    <span>비밀의 숲2 | 4화</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_vod_thumb_02.jpg" alt="thumb02">
+                                    <span>놀라운 토요일 - 도레미마켓 | 122화</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_vod_thumb_03.jpg" alt="thumb03">
+                                    <span>아는 형님 | 244화</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_vod_thumb_04.jpg" alt="thumb04">
+                                    <span>여름방학 | 6화</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_vod_thumb_05.jpg" alt="thumb05">
+                                    <span>온앤오프 | 17화</span>
+                                </a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

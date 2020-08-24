@@ -1,0 +1,147 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '고딕';
+}
+
+ul, ol {list-style: none;}
+
+a {text-decoration: none; color: #111;}
+
+#wrapper {
+    width: 100%;            
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* 헤더 */
+header {
+    width: 100%;
+    min-width: 1200px;
+    position: relative;
+    height: 230px;
+    background-color: #ff1f45;
+}
+
+header > div {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header > .top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 1300px;
+    height: 30px;
+    padding: 0 50px;
+    z-index: 20000;
+    filter: brightness(.9);
+    margin: 0 auto;
+    background-color: #ff1f45;
+}
+header > .top > div {
+    position: absolute;
+    right: 0;
+    line-height: 30px;
+}
+
+header > .gnb {
+    position: fixed;
+    top: 30px;
+    padding: 23px 50px;
+    width: 100%;
+    min-width: 1300px;
+    height: 70px;
+    z-index: 16000;
+    pointer-events: none;
+    background-color: rgba(255, 31, 69, .98);
+}
+header > .gnb > div {
+    display: block;
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    pointer-events: visible;
+}
+header > .gnb > div > h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+header > .gnb > div > h1 > a {
+    display: block;
+    width: 120px;
+    height: 30px;
+    font-size: 0;
+    overflow: hidden;
+    background-image: url('../img/logo_01.png');
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    background-size: 100% auto;
+}
+header > .gnb > div > .menu {
+    user-select: none;
+    text-align: center;
+}
+header > .gnb > div > .menu > ul {
+    position: absolute;
+    left: 300px;
+}
+header > .gnb > div > .menu > ul > li {
+    display: inline-block;
+    height: 100%;
+    padding: 0 30px;
+    position: relative;
+}
+header > .gnb > div > .menu > ul > li > a {
+    font-size: 25px;
+    font-weight: 900;
+    color: #fafafa;
+    text-transform: uppercase;
+    transition: opacity .1s;
+}
+
+header > .gnb > div > form {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-left: -185px;
+    margin-top: -22px;
+    
+    display: inline-block;
+    width: 400px;
+    height: 45px;   
+}
+header > .gnb > div > form > input {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    
+    background-color: #ff1f45;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+header > .gnb > div > form > button {
+    position: absolute;
+    right: 6px;
+    top: 20px;
+    background: #ff1f45;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    outline:none;
+}
