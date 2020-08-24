@@ -15,6 +15,8 @@
         
         
         main {}
+
+        /* 메인 - 슬라이더 */
         main > section {
             width: 1200px;
             height: auto;
@@ -26,7 +28,7 @@
             box-sizing: border-box;
         }
 
-
+        /* 메인 - 내비게이터 */
         main > section > .nav {
             display: block;
             width: 100%;
@@ -46,14 +48,15 @@
             text-decoration: underline;
         }
 
-        main > section > .main-vod-thumb {
+        /* 메인 - 썸네일 */
+        main > section > .main-thumb {
             position: relative;
             display: block;
             width: 100%;
             height: auto;
             overflow: hidden;
         }
-        main > section > .main-vod-thumb > div {
+        main > section > .main-thumb > div.vod {
             position: absolute;
             display: inline-block;
             top: 0;
@@ -62,28 +65,45 @@
             padding-left: 50px;
             box-sizing: border-box;
         }
-        main > section > .main-vod-thumb > ul {
+        main > section > .main-thumb > div.movie {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 27px;
+            box-sizing: border-box;
+        }
+        main > section > .main-thumb > ul {
             padding-left: 100px;
             display: inline;
         }
-        main > section > .main-vod-thumb > ul > li {
+        main > section > .main-thumb > ul > li {
             display: inline-block;
-            width: 200px;
-            padding: 5px;
+            width: 250px;
+            margin: 5px;
+            box-sizing: border-box;
+            background-color: #969696;
         }
-        main > section > .main-vod-thumb > ul > li > div {}
-        main > section > .main-vod-thumb > ul > li > div > a {}
-        main > section > .main-vod-thumb > ul > li >div > a > img {
+        main > section > .main-thumb > ul > li > div {}
+        main > section > .main-thumb > ul > li > div > a {}
+        main > section > .main-thumb > ul > li > div > a > img {
             width: 100%;
             height: 100%;
         }
-
+        main > section > .main-thumb > ul > li > div > a > span {
+            display: block;
+            width: 100%;
+            padding-left: 5px;
+            padding-bottom: 20px;
+        }
 
 
         footer {
             width: 100%;
             height: 300px;
             border: 1px solid red;
+            background-color: #353535;
         }
        
     </style>
@@ -129,14 +149,14 @@
                 <section class="slider">
                     <div class="slider-item">
                         <a href="#">
-                            <img src="./img/slider_01.png" alt="slider01">
+                            <img src="./img/main_slider_01.png" alt="slider01">
                             <span class="slider_info">
                                 <span class="sub">전율의 시작 시즌1 무료 정주행</span>
                             </span>
                         </a>
                     
                         <a href="#">
-                            <img src="./img/slider_02.png" alt="slider02">
+                            <img src="./img/main_slider_02.png" alt="slider02">
                             <span class="slider_info">
                                 <span class="title">이때다 싶어 모아본 린다G 시크릿!</span>
                                 <span class="sub"><오프더레코드>,<골든12>까지!</span>
@@ -144,7 +164,7 @@
                         </a>
                     
                         <a href="#">
-                            <img src="./img/slider_03.png" alt="slider03">
+                            <img src="./img/main_slider_03.png" alt="slider03">
                             <span class="slider_info">
                                 <span class="title">극장 동시 상영작</span>
                                 <span class="sub">영화관에 갈 수 없다면 지금 당장 티빙에서!</span>
@@ -152,7 +172,7 @@
                         </a>
                     
                         <a href="#">
-                            <img src="./img/slider_04.png" alt="slider04">
+                            <img src="./img/main_slider_04.png" alt="slider04">
                             <span class="slider_info">
                                 <span class="title">극장 동시 상영작</span>
                                 <span class="sub"><그냥 사랑하는 사이> 정주행하러 우리집 가자 ♨</span>
@@ -160,7 +180,7 @@
                         </a>
                     
                         <a href="#">
-                            <img src="./img/slider_05.png" alt="slider05">
+                            <img src="./img/main_slider_05.png" alt="slider05">
                             <span class="slider_info">
                                 <span class="sub">디즈니 영화 보고 캠핑체어도 받고♬</span>
                             </span>
@@ -182,14 +202,17 @@
                     </ul>
                 </div>
 
-                <div class="main-vod-thumb">
-                    <div>VOD</div>
+                <div class="main-thumb">
+                    <div class="vod">VOD</div>
                     <ul>
                         <li>
                             <div>
                                 <a href="#">
                                     <img src="./img/main_vod_thumb_01.jpg" alt="thumb01">
-                                    <span>비밀의 숲2 | 4화</span>
+                                    <span>
+                                        <span>비밀의 숲2</span>
+                                        <span> | 4화</span>
+                                    </span>
                                 </a>
                             </div>
                         </li>
@@ -197,7 +220,11 @@
                             <div>
                                 <a href="#">
                                     <img src="./img/main_vod_thumb_02.jpg" alt="thumb02">
-                                    <span>놀라운 토요일 - 도레미마켓 | 122화</span>
+                                    <span>
+                                        <span>놀라운 토요일 - 도레미마켓</span>
+                                        <span> | 122화</span>
+                                    </span>
+                                    
                                 </a>
                             </div>
                         </li>
@@ -205,7 +232,10 @@
                             <div>
                                 <a href="#">
                                     <img src="./img/main_vod_thumb_03.jpg" alt="thumb03">
-                                    <span>아는 형님 | 244화</span>
+                                    <span>
+                                        <span>아는 형님</span>
+                                        <span> | 244화</span>
+                                    </span>
                                 </a>
                             </div>
                         </li>
@@ -213,24 +243,93 @@
                             <div>
                                 <a href="#">
                                     <img src="./img/main_vod_thumb_04.jpg" alt="thumb04">
-                                    <span>여름방학 | 6화</span>
+                                    <span>
+                                        <span>여름방학</span>
+                                        <span> | 6화</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+
+                <div class="main-thumb">
+                    <div class="movie">MOVIE</div>
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_movie_thumb_01.jpg" alt="thumb01">
+                                    <span>
+                                        <span>어바웃타임</span>
+                                    </span>
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_vod_thumb_05.jpg" alt="thumb05">
-                                    <span>온앤오프 | 17화</span>
+                                    <img src="./img/main_movie_thumb_02.jpg" alt="thumb02">
+                                    <span>
+                                        <span>미술관 옆 동물원</span>
+                                    </span>
+                                    
                                 </a>
                             </div>
                         </li>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_movie_thumb_03.jpg" alt="thumb03">
+                                    <span>
+                                        <span>시네마 천국</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#">
+                                    <img src="./img/main_movie_thumb_04.jpg" alt="thumb04">
+                                    <span>
+                                        <span>호로비츠를 위하여</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                        
                         
                     </ul>
                 </div>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <div>
+                <div class="notice">
+                    <table border="1">
+                        <tr>
+                            <td>공지사항</td>
+                            <td>공지사항 제목</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <ul>
+                        <li>회사소개</li>
+                        <li>서비스소개</li>
+                        <li>이용약관</li>
+                        <li>개인정보처리방침</li>
+                        <li>고객센터</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./img/ottving_logo.png" alt="logo">
+                    <p></p>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
