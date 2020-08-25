@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTTVING | 오늘의 노는 법</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="/ottving/css/style.css">
+    <style>
+        main {}
+        main > section {
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid blue;
+        }
+        main > section > .button {
+            border: 1px solid red;
+        }
+
+        main > section > .recommend {}
+        main > section > .recommend > span {
+            font-size: 17px;
+            font-weight: bold;
+        }
+        main > section > .recommend > div.content {
+            border: 1px solid blue;
+            margin-bottom: 70px;
+        }
+        main > section > .recommend > div.content > ul {
+            margin-left: 45px;
+            border: 1px solid red;
+        }
+        main > section > .recommend > div.content > ul > li {
+            display: inline-block;
+            width: 270px;
+            border: 1px solid green;
+        }
+        main > section > .recommend > div.content > ul > li > a {}
+        main > section > .recommend > div.content > ul > li > a > img {
+            width: 100%;
+        }
+        main > section > .recommend > div.content > ul > li > div {}
+        main > section > .recommend > div.content > ul > li > div > div {}
+        main > section > .recommend > div.content > ul > li > div > div > span {}
+
+        main > section > .thema {}
+        main > section > .thema > div {
+            position: relative;
+            margin-top: 25px;
+        }
+        main > section > .thema > div > a {}
+        main > section > .thema > div > a > img {
+            border-radius: 7px;
+        }
+        main > section > .thema > div > div {
+            position: absolute;
+            top: 0;
+            left: 50px;
+            display: table;
+            vertical-align: middle;
+            line-height: 1;
+            height: 100%;
+            z-index: 10000;
+            color: #fafafa;
+        }
+        main > section > .thema > div > div > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        main > section > .thema > div > div > div > .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        main > section > .thema > div > div > .tag {}
+        main > section > .thema > div > div > .tag > span {}
+
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.slider .slider-item').bxSlider({
+                pager: false
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#">홍길동</a>
+                    <a href="#">이용권</a>
+                    <a href="#">편성표</a>
+                    <a href="#">위시리스트</a>
+                </div>
+            </div>
+            <div class="gnb">
+                <div>
+                    <h1><a href="#">OTTVING</a></h1>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">LIVE</a></li>
+                            <li><a href="#">VOD</a></li>
+                            <li><a href="#">MOVIE</a></li>
+                        </ul>
+                    </div>
+                    <form action="#">
+                        <input type="text" name="search" value="검색">
+                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+                <!-- 테마/장르 선택 -->
+                <div class="button">
+                    <button type="button">테마</button>
+                    <button type="button">장르</button>
+                </div>
+                
+                <!-- 추천 리스트 -->
+                <div class="recommend">
+                    <span>홍길동 님이 좋아할 만한 방송</span>
+                    <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="/ottving/img/main_vod_thumb_01.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                    <div>
+                                        <span>생후 531개월 김종국종국의 집에 놀러온 '용띠 클럽 멤버'</span>
+                                    </div>
+                                    <div>
+                                        <span>출연 : 신동엽, 서장훈, 탁재훈 </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/main_vod_thumb_01.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                    <div>
+                                        <span>생후 531개월 김종국종국의 집에 놀러온 '용띠 클럽 멤버'</span>
+                                    </div>
+                                    <div>
+                                        <span>출연 : 신동엽, 서장훈, 탁재훈 </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/main_vod_thumb_01.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                    <div>
+                                        <span>생후 531개월 김종국종국의 집에 놀러온 '용띠 클럽 멤버'</span>
+                                    </div>
+                                    <div>
+                                        <span>출연 : 신동엽, 서장훈, 탁재훈 </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/main_vod_thumb_01.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                    <div>
+                                        <span>생후 531개월 김종국종국의 집에 놀러온 '용띠 클럽 멤버'</span>
+                                    </div>
+                                    <div>
+                                        <span>출연 : 신동엽, 서장훈, 탁재훈 </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 테마 리스트 -->
+                <div class="thema">
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_02.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">슈퍼스타 이효리의</br>레전드 리얼리티</span>
+                                <div class="tag">
+                                    <span>#오프터레코드 #골든12 #이효리의X언니</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                        <div>
+                            <div>
+                                <span class="title">8월, OTTVING의 선택</span>
+                                <div class="tag">
+                                    <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <div class="notice">
+                    <table border="1">
+                        <tr>
+                            <td>공지사항</td>
+                            <td>공지사항 제목</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <ul>
+                        <li>회사소개</li>
+                        <li>서비스소개</li>
+                        <li>이용약관</li>
+                        <li>개인정보처리방침</li>
+                        <li>고객센터</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="#" alt="logo">
+                    <p></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
