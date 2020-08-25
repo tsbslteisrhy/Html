@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        
-        
         main {}
 
         /* 메인 - 슬라이더 */
@@ -105,7 +103,6 @@
             border: 1px solid red;
             background-color: #353535;
         }
-       
     </style>
     <script>
         $(document).ready(function(){
@@ -117,29 +114,35 @@
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <div class="top">
-                <div>
-                    <a href="#">홍길동</a>
-                    <a href="#">이용권</a>
-                    <a href="#">편성표</a>
-                    <a href="#">위시리스트</a>
+        <header id="header" class="page-live-main">
+            <div id="top-gnb">
+                <div class="top-wrap">
+                    <nav id="topUtil" class="top-util">
+                        <ul>
+                            <li><a href="#">홍길동</a></li>
+                            <li><a href="#">이용권</a></li>
+                            <li><a href="#">편성표</a></li>
+                            <li><a href="#">위시리스트</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="gnb">
-                <div>
+            <div id="gnb">
+                <div class="inner-wrap">
                     <h1><a href="#">OTTVING</a></h1>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">LIVE</a></li>
-                            <li><a href="#">VOD</a></li>
-                            <li><a href="#">MOVIE</a></li>
-                        </ul>
+                    <nav id="gnbMenu" class="gnb-menu">
+                        <h2><a href="#">LIVE</a></h2>
+                        <h2><a href="#">VOD</a></h2>
+                        <h2><a href="#">MOVIE</a></h2>
+                    </nav>
+                    <div id="gnbUtil" class="gnb-util">
+                        <div id="gnbSearch">
+                            <div class="gnb-search-input">
+                                <input type="text" id="autocomplete" title="keyword" autocomplete="off">
+                            </div>
+                            <button class="btnSearch"><i class="fas fa-search fa-2x"></i></button>
+                        </div>
                     </div>
-                    <form action="#">
-                        <input type="text" name="search" value="검색">
-                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
                 </div>
             </div>
         </header>
@@ -149,14 +152,14 @@
                 <section class="slider">
                     <div class="slider-item">
                         <a href="#">
-                            <img src="./img/main_slider_01.png" alt="slider01">
+                            <img src="/ottving/img/main_slider_01.png" alt="slider01">
                             <span class="slider_info">
                                 <span class="sub">전율의 시작 시즌1 무료 정주행</span>
                             </span>
                         </a>
                     
                         <a href="#">
-                            <img src="./img/main_slider_02.png" alt="slider02">
+                            <img src="/ottving/img/main_slider_02.png" alt="slider02">
                             <span class="slider_info">
                                 <span class="title">이때다 싶어 모아본 린다G 시크릿!</span>
                                 <span class="sub"><오프더레코드>,<골든12>까지!</span>
@@ -164,7 +167,7 @@
                         </a>
                     
                         <a href="#">
-                            <img src="./img/main_slider_03.png" alt="slider03">
+                            <img src="/ottving/img/main_slider_03.png" alt="slider03">
                             <span class="slider_info">
                                 <span class="title">극장 동시 상영작</span>
                                 <span class="sub">영화관에 갈 수 없다면 지금 당장 티빙에서!</span>
@@ -172,7 +175,7 @@
                         </a>
                     
                         <a href="#">
-                            <img src="./img/main_slider_04.png" alt="slider04">
+                            <img src="/ottving/img/main_slider_04.png" alt="slider04">
                             <span class="slider_info">
                                 <span class="title">극장 동시 상영작</span>
                                 <span class="sub"><그냥 사랑하는 사이> 정주행하러 우리집 가자 ♨</span>
@@ -180,7 +183,7 @@
                         </a>
                     
                         <a href="#">
-                            <img src="./img/main_slider_05.png" alt="slider05">
+                            <img src="/ottving/img/main_slider_05.png" alt="slider05">
                             <span class="slider_info">
                                 <span class="sub">디즈니 영화 보고 캠핑체어도 받고♬</span>
                             </span>
@@ -208,7 +211,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_vod_thumb_01.jpg" alt="thumb01">
+                                    <img src="/ottving/img/main_vod_thumb_01.jpg" alt="thumb01">
                                     <span>
                                         <span>비밀의 숲2</span>
                                         <span> | 4화</span>
@@ -219,7 +222,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_vod_thumb_02.jpg" alt="thumb02">
+                                    <img src="/ottving/img/main_vod_thumb_02.jpg" alt="thumb02">
                                     <span>
                                         <span>놀라운 토요일 - 도레미마켓</span>
                                         <span> | 122화</span>
@@ -231,7 +234,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_vod_thumb_03.jpg" alt="thumb03">
+                                    <img src="/ottving/img/main_vod_thumb_03.jpg" alt="thumb03">
                                     <span>
                                         <span>아는 형님</span>
                                         <span> | 244화</span>
@@ -242,7 +245,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_vod_thumb_04.jpg" alt="thumb04">
+                                    <img src="/ottving/img/main_vod_thumb_04.jpg" alt="thumb04">
                                     <span>
                                         <span>여름방학</span>
                                         <span> | 6화</span>
@@ -261,7 +264,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_movie_thumb_01.jpg" alt="thumb01">
+                                    <img src="/ottving/img/main_movie_thumb_01.jpg" alt="thumb01">
                                     <span>
                                         <span>어바웃타임</span>
                                     </span>
@@ -271,7 +274,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_movie_thumb_02.jpg" alt="thumb02">
+                                    <img src="/ottving/img/main_movie_thumb_02.jpg" alt="thumb02">
                                     <span>
                                         <span>미술관 옆 동물원</span>
                                     </span>
@@ -282,7 +285,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_movie_thumb_03.jpg" alt="thumb03">
+                                    <img src="/ottving/img/main_movie_thumb_03.jpg" alt="thumb03">
                                     <span>
                                         <span>시네마 천국</span>
                                     </span>
@@ -292,7 +295,7 @@
                         <li>
                             <div>
                                 <a href="#">
-                                    <img src="./img/main_movie_thumb_04.jpg" alt="thumb04">
+                                    <img src="/ottving/img/main_movie_thumb_04.jpg" alt="thumb04">
                                     <span>
                                         <span>호로비츠를 위하여</span>
                                     </span>
@@ -325,7 +328,7 @@
                     </ul>
                 </div>
                 <div>
-                    <img src="./img/logo_01.png" alt="logo">
+                    <img src="/ottving/img/ottving_logo.png" alt="logo">
                     <p></p>
                 </div>
             </div>
