@@ -21,7 +21,7 @@ strong {
 header {
     position: relative;
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
     height: 230px;
     background-color: #ff1f45;
 }
@@ -30,7 +30,7 @@ header > #top-gnb {
     top: 0;
     left: 0;
     width: 100%;
-    min-width: 1300px;
+    min-width: 1200px;
     height: 30px;
     margin: 0 auto;
     z-index: 20000;
@@ -54,6 +54,7 @@ header > #top-gnb > .top-wrap > .top-util > ul > li {
     position: relative;
     margin-left: 20px;
     color: #777;
+    box-sizing: border-box;
 }
 header > #top-gnb > .top-wrap > .top-util > ul > li > a {
     display: block;
@@ -73,6 +74,7 @@ header > #gnb {
     z-index: 16000;
     pointer-events: none;
     background-color: rgba(255, 31, 69, .98);
+    box-sizing: border-box;
 }
 header > #gnb > .inner-wrap {
     width: 1200px;
@@ -113,6 +115,7 @@ header > #gnb > .inner-wrap > .gnb-menu > h2 {
     color: #111;
     margin-right: 0;
     font-weight: 500;
+    box-sizing: border-box;
 }
 header > #gnb > .inner-wrap > .gnb-menu > h2 > a {
     height: 100%;
@@ -121,6 +124,7 @@ header > #gnb > .inner-wrap > .gnb-menu > h2 > a {
     font-size: 25px;
     font-weight: 900;
     text-transform: uppercase;
+    box-sizing: border-box;
 }
 
 header > #gnb > .inner-wrap > .gnb-util {
@@ -140,6 +144,7 @@ header > #gnb > .inner-wrap > .gnb-util {
     background: rgba(0, 0, 0, .2);
     border-radius: 30px;
     border: 2px solid transparent;
+    box-sizing: border-box;
 }
 #gnbSearch > .gnb-search-input {
     margin-bottom: 10px;

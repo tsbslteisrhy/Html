@@ -14,89 +14,170 @@
     <style>
         main {}
 
-        /* 메인 - 슬라이더 */
-        main > section {
-            width: 1200px;
-            height: auto;
-            margin: 0 auto;
-            border: 1px solid blue;
+        .container {
+            width: 100%;
+            min-height: 1300px;
+            padding: 3.75rem 0 9.375rem;
+            background: #353535;
         }
-        main > section > .slider {
-            border: 1px solid red;
+
+        /* 메인 - 슬라이더 */
+        main > div > section {
+            position: relative;
+            width: 1200px;
+            top: -13px;
+            padding-bottom: 7px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
             box-sizing: border-box;
+        }
+        .bx-wrapper {
+            box-shadow: 0 0 0 #ccc;
+            border: 0 solid #fff;
+            background: transparent;
+            pointer-events: none;
+            position: relative;
+        }
+        .keyvisual-slider .bx-wrapper {
+            width: 1200px;
+            min-width: 1200px;
+            margin-top: -213px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .bx-wrapper .bx-viewport {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 30px;
+            margin-top: -30px;
+        }
+        .bx-wrapper .bx-viewport .bxslider {
+            display: block;
+            width: auto;
+            height: 420px;
+            pointer-events: visible;
+        }
+        .bx-wrapper .bx-viewport .bxslider > * {}
+        .bx-wrapper .bxslider .keyvisual-slider-inner {}
+        .bx-wrapper .bxslider .keyvisual-slider-inner .slider-item {}
+        .bx-wrapper .bxslider .keyvisual-slider-inner .slider-item a {
+            position: relative;
+            display: inline-block;
+            width: 1200px;
+            height: 420px;
+            text-align: center;
+        }
+        .slider-item img {
+            border: 0;
+            top: 0;
+            left: .9375rem;
+            border-radius: .7rem;
+        }
+        .slider-item .slider-item_info {
+            position: absolute;
+            width: 100%;
+            bottom: 3.75rem;
+            left: 0;
+            text-align: center;
+        }
+        .slider-item .slider-item_info .title {
+            width: 43.75rem;
+            height: auto;
+            overflow: inherit;
+            margin: 0 auto;
+            font-size: 2.25rem;
+            line-height: 100%;
+            font-weight: 700;
+        }
+        .slider-item .slider-item_info .sub {
+            opacity: 1;
+            width: 43.75rem;
+            height: auto;
+            overflow: inherit;
+            margin-top: 1.125rem;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.25rem;
+            color: #fff;
+            line-height: 100%;
+            display: block;
         }
 
         /* 메인 - 내비게이터 */
-        main > section > .nav {
+        main .content {
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+        main .content .nav {
             display: block;
             width: 100%;
-            padding: 5px;
-            border: 1px solid green;
-            box-sizing: border-box;
+            padding: 10px;
         }
-        main > section > .nav > ul {}
-        main > section > .nav > ul > li {
+        main .content .nav > ul {}
+        main .content .nav > ul > li {
             display: inline-block;
         }
-        main > section > .nav > ul > li > a {
+        main .content .nav > ul > li > a {
             font-size: 16px;
         }
-        main > section > .nav > ul > li:first-child > a {
+        main .content .nav > ul > li:first-child > a {
             font-weight: bold;
             text-decoration: underline;
         }
 
         /* 메인 - 썸네일 */
-        main > section > .main-thumb {
+        main .thumb {
             position: relative;
-            display: block;
             width: 100%;
             height: auto;
             overflow: hidden;
         }
-        main > section > .main-thumb > div.vod {
+        main .thumb > div {
+            display: inline-block;
+        }
+        main .thumb > div:nth-of-type(1) {
             position: absolute;
             display: inline-block;
             top: 0;
             font-size: 20px;
             font-weight: bold;
-            padding-left: 50px;
+            color: #fafafa;
+            padding-left: 25px;
             box-sizing: border-box;
         }
-        main > section > .main-thumb > div.movie {
-            position: absolute;
-            display: inline-block;
-            top: 0;
-            font-size: 20px;
-            font-weight: bold;
-            padding-left: 27px;
-            box-sizing: border-box;
-        }
-        main > section > .main-thumb > ul {
+        main .thumb > div > ul {
             padding-left: 100px;
             display: inline;
         }
-        main > section > .main-thumb > ul > li {
+        main .thumb > div > ul > li {
             display: inline-block;
             width: 250px;
             margin: 5px;
             box-sizing: border-box;
             background-color: #969696;
         }
-        main > section > .main-thumb > ul > li > div {}
-        main > section > .main-thumb > ul > li > div > a {}
-        main > section > .main-thumb > ul > li > div > a > img {
+        main .thumb > div > ul > li > div {}
+        main .thumb > div > ul > li > div > a {}
+        main .thumb > div > ul > li > div > a > img {
             width: 100%;
             height: 100%;
         }
-        main > section > .main-thumb > ul > li > div > a > span {
+        main .thumb > div > ul > li > div > a > span {
             display: block;
             width: 100%;
-            padding-left: 5px;
+            padding-left: 10px;
             padding-bottom: 20px;
+            font-size: 17px;
+            font-weight: 500;
+            box-sizing: border-box;
         }
 
-
+        /* 푸터 */
         footer {
             width: 100%;
             height: 300px;
@@ -106,11 +187,12 @@
     </style>
     <script>
         $(document).ready(function(){
-            $('.slider .slider-item').bxSlider({
-                pager: false
+            $('.bxslider').bxSlider({
+                infiniteLoop: false
             });
         });
     </script>
+    
 </head>
 <body>
     <div id="wrapper">
@@ -147,166 +229,180 @@
             </div>
         </header>
         <main>
-            <section>
+            <div class="container page-main">
                 <!-- 슬라이더 -->
-                <section class="slider">
-                    <div class="slider-item">
-                        <a href="#">
-                            <img src="/ottving/img/main_slider_01.png" alt="slider01">
-                            <span class="slider_info">
-                                <span class="sub">전율의 시작 시즌1 무료 정주행</span>
-                            </span>
-                        </a>
-                    
-                        <a href="#">
-                            <img src="/ottving/img/main_slider_02.png" alt="slider02">
-                            <span class="slider_info">
-                                <span class="title">이때다 싶어 모아본 린다G 시크릿!</span>
-                                <span class="sub"><오프더레코드>,<골든12>까지!</span>
-                            </span>
-                        </a>
-                    
-                        <a href="#">
-                            <img src="/ottving/img/main_slider_03.png" alt="slider03">
-                            <span class="slider_info">
-                                <span class="title">극장 동시 상영작</span>
-                                <span class="sub">영화관에 갈 수 없다면 지금 당장 티빙에서!</span>
-                            </span>
-                        </a>
-                    
-                        <a href="#">
-                            <img src="/ottving/img/main_slider_04.png" alt="slider04">
-                            <span class="slider_info">
-                                <span class="title">극장 동시 상영작</span>
-                                <span class="sub"><그냥 사랑하는 사이> 정주행하러 우리집 가자 ♨</span>
-                            </span>
-                        </a>
-                    
-                        <a href="#">
-                            <img src="/ottving/img/main_slider_05.png" alt="slider05">
-                            <span class="slider_info">
-                                <span class="sub">디즈니 영화 보고 캠핑체어도 받고♬</span>
-                            </span>
-                        </a>
+                <section class="keyvisual-slider">
+                    <div class="bxslider">
+                        <div class="keyvisual-slider-inner">
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="/ottving/img/main_slider_01.png" alt="slider01">
+                                    <span class="slider-item_info">
+                                        <span class="sub">문화의날 무비프리미엄 100%캐시백!</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="keyvisual-slider-inner">
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="/ottving/img/main_slider_02.png" alt="slider02">
+                                    <span class="slider-item_info">
+                                        <span class="title">극장 동시 상영작</span>
+                                        <span class="sub">영화관에 갈 수 없다면 지금 당장 티빙에서!</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="keyvisual-slider-inner">
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="/ottving/img/main_slider_03.png" alt="slider03">
+                                    <span class="slider-item_info">
+                                        <span class="sub">디즈니 영화 보고 캠핑체어도 받고♬</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="keyvisual-slider-inner">
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="/ottving/img/main_slider_04.png" alt="slider04">
+                                    <span class="slider-item_info">
+                                        <span class="sub">화요일 오후 7시 | 투니버스</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="keyvisual-slider-inner">
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="/ottving/img/main_slider_05.png" alt="slider05">
+                                    <span class="slider-item_info">
+                                        <span class="title">수사물 레전드, 어디까지 봤니?!</span>
+                                        <span class="sub">한국 3대 수사물, 이거 인정?!</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
-                    
-                    
                 </section>
 
                 <!-- 메인화면 콘텐츠 카테고리 : 시청 중 콘텐츠 -->
-                <div class="nav">
-                    <ul>
-                        <li><a href="#">시청 중 콘텐츠 | </a></li>
-                        <li><a href="#">위시 콘텐츠 | </a></li>
-                        <li><a href="#">인기 콘텐츠 | </a></li>
-                        <li><a href="#">최신 콘텐츠 | </a></li>
-                        <li><a href="#">추천 콘텐츠</a></li>
-                    </ul>
+                <div class="content">
+                    <div class="watching">
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#">시청 중 콘텐츠 | </a></li>
+                                <li><a href="#">위시 콘텐츠 | </a></li>
+                                <li><a href="#">인기 콘텐츠 | </a></li>
+                                <li><a href="#">최신 콘텐츠 | </a></li>
+                                <li><a href="#">추천 콘텐츠</a></li>
+                            </ul>
+                        </div>
+                        <div class="thumb">
+                            <div class="vod">VOD</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>비밀의 숲2</span>
+                                                    <span> | 4화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>놀라운 토요일 - 도레미마켓</span>
+                                                    <span> | 122화</span>
+                                                </span>
+                                                
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>아는 형님</span>
+                                                    <span> | 244화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>여름방학</span>
+                                                    <span> | 6화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="thumb">
+                            <div class="movie">MOVIE</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>어바웃타임</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>미술관 옆 동물원</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>시네마 천국</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>호로비츠를 위하여</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="main-thumb">
-                    <div class="vod">VOD</div>
-                    <ul>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_vod_thumb_01.jpg" alt="thumb01">
-                                    <span>
-                                        <span>비밀의 숲2</span>
-                                        <span> | 4화</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_vod_thumb_02.jpg" alt="thumb02">
-                                    <span>
-                                        <span>놀라운 토요일 - 도레미마켓</span>
-                                        <span> | 122화</span>
-                                    </span>
-                                    
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_vod_thumb_03.jpg" alt="thumb03">
-                                    <span>
-                                        <span>아는 형님</span>
-                                        <span> | 244화</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_vod_thumb_04.jpg" alt="thumb04">
-                                    <span>
-                                        <span>여름방학</span>
-                                        <span> | 6화</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        
-                        
-                    </ul>
-                </div>
-
-                <div class="main-thumb">
-                    <div class="movie">MOVIE</div>
-                    <ul>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_movie_thumb_01.jpg" alt="thumb01">
-                                    <span>
-                                        <span>어바웃타임</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_movie_thumb_02.jpg" alt="thumb02">
-                                    <span>
-                                        <span>미술관 옆 동물원</span>
-                                    </span>
-                                    
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_movie_thumb_03.jpg" alt="thumb03">
-                                    <span>
-                                        <span>시네마 천국</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#">
-                                    <img src="/ottving/img/main_movie_thumb_04.jpg" alt="thumb04">
-                                    <span>
-                                        <span>호로비츠를 위하여</span>
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                        
-                        
-                    </ul>
-                </div>
-            </section>
+            </div>
         </main>
         <footer>
             <div>
