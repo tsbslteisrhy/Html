@@ -21,6 +21,17 @@
             background: #353535;
         }
 
+        main .content {
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        main .content > div {
+            border-top: 1px solid #969697;
+            margin-bottom: 30px;
+        }
+
         /* 메인 - 슬라이더 */
         main > div > section {
             position: relative;
@@ -42,7 +53,7 @@
         .keyvisual-slider .bx-wrapper {
             width: 1200px;
             min-width: 1200px;
-            margin-top: -213px;
+            margin-top: -173px;
             margin-left: 0;
             margin-right: 0;
         }
@@ -106,17 +117,15 @@
             display: block;
         }
 
-        /* 메인 - 내비게이터 */
-        main .content {
-            width: 1200px;
-            height: auto;
-            margin: 0 auto;
-            border: 1px solid red;
+        .bx-wrapper .bx-controls-direction a {
+            z-index: 1000;
         }
+
+        /* 메인 - 내비게이터 */
         main .content .nav {
             display: block;
             width: 100%;
-            padding: 10px;
+            padding: 30px 0;
         }
         main .content .nav > ul {}
         main .content .nav > ul > li {
@@ -157,7 +166,7 @@
         main .thumb > div > ul > li {
             display: inline-block;
             width: 250px;
-            margin: 5px;
+            margin: 15px 5px;
             box-sizing: border-box;
             background-color: #969696;
         }
@@ -177,18 +186,13 @@
             box-sizing: border-box;
         }
 
-        /* 푸터 */
-        footer {
-            width: 100%;
-            height: 300px;
-            border: 1px solid red;
-            background-color: #353535;
-        }
     </style>
     <script>
         $(document).ready(function(){
             $('.bxslider').bxSlider({
-                infiniteLoop: false
+                pager: false,
+                auto: true,
+                pause: 4000
             });
         });
     </script>
@@ -293,11 +297,455 @@
                     <div class="watching">
                         <div class="nav">
                             <ul>
-                                <li><a href="#">시청 중 콘텐츠 | </a></li>
-                                <li><a href="#">위시 콘텐츠 | </a></li>
-                                <li><a href="#">인기 콘텐츠 | </a></li>
-                                <li><a href="#">최신 콘텐츠 | </a></li>
+                                <li><a href="#">시청 중 콘텐츠</a></li>
+                                <li><a href="#">&nbsp;| 위시 콘텐츠</a></li>
+                                <li><a href="#"> | 인기 콘텐츠</a></li>
+                                <li><a href="#"> | 최신 콘텐츠</a></li>
+                                <li><a href="#"> | 추천 콘텐츠</a></li>
+                            </ul>
+                        </div>
+                        <div class="thumb">
+                            <div class="vod">VOD</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>비밀의 숲2</span>
+                                                    <span> | 4화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>놀라운 토요일 - 도레미마켓</span>
+                                                    <span> | 122화</span>
+                                                </span>
+                                                
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>아는 형님</span>
+                                                    <span> | 244화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>여름방학</span>
+                                                    <span> | 6화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="thumb">
+                            <div class="movie">MOVIE</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>어바웃타임</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>미술관 옆 동물원</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>시네마 천국</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>호로비츠를 위하여</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wish">
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#">위시 콘텐츠</a></li>
+                                <li><a href="#">&nbsp;| 시청 중 콘텐츠</a></li>
+                                <li><a href="#"> | 인기 콘텐츠</a></li>
+                                <li><a href="#"> | 최신 콘텐츠</a></li>
+                                <li><a href="#"> | 추천 콘텐츠</a></li>
+                            </ul>
+                        </div>
+                        <div class="thumb">
+                            <div class="vod">VOD</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>비밀의 숲2</span>
+                                                    <span> | 4화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>놀라운 토요일 - 도레미마켓</span>
+                                                    <span> | 122화</span>
+                                                </span>
+                                                
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>아는 형님</span>
+                                                    <span> | 244화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>여름방학</span>
+                                                    <span> | 6화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="thumb">
+                            <div class="movie">MOVIE</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>어바웃타임</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>미술관 옆 동물원</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>시네마 천국</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>호로비츠를 위하여</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hit">
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#">인기 콘텐츠</a></li>
+                                <li><a href="#">&nbsp;| 시청 중 콘텐츠</a></li>
+                                <li><a href="#"> | 위시 콘텐츠</a></li>
+                                <li><a href="#"> | 최신 콘텐츠</a></li>
+                                <li><a href="#"> | 추천 콘텐츠</a></li>
+                            </ul>
+                        </div>
+                        <div class="thumb">
+                            <div class="vod">VOD</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>비밀의 숲2</span>
+                                                    <span> | 4화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>놀라운 토요일 - 도레미마켓</span>
+                                                    <span> | 122화</span>
+                                                </span>
+                                                
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>아는 형님</span>
+                                                    <span> | 244화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>여름방학</span>
+                                                    <span> | 6화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="thumb">
+                            <div class="movie">MOVIE</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>어바웃타임</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>미술관 옆 동물원</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>시네마 천국</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>호로비츠를 위하여</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="latest">
+                        <div class="nav">
+                            <ul>
+                                <li><a href="#">최신 콘텐츠</a></li>
+                                <li><a href="#">&nbsp;| 시청 중 콘텐츠</a></li>
+                                <li><a href="#"> | 위시 콘텐츠</a></li>
+                                <li><a href="#"> | 인기 콘텐츠</a></li>
+                                <li><a href="#"> | 추천 콘텐츠</a></li>
+                            </ul>
+                        </div>
+                        <div class="thumb">
+                            <div class="vod">VOD</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>비밀의 숲2</span>
+                                                    <span> | 4화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>놀라운 토요일 - 도레미마켓</span>
+                                                    <span> | 122화</span>
+                                                </span>
+                                                
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>아는 형님</span>
+                                                    <span> | 244화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_vod_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>여름방학</span>
+                                                    <span> | 6화</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div class="thumb">
+                            <div class="movie">MOVIE</div>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_01.jpg" alt="thumb01">
+                                                <span>
+                                                    <span>어바웃타임</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_02.jpg" alt="thumb02">
+                                                <span>
+                                                    <span>미술관 옆 동물원</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_03.jpg" alt="thumb03">
+                                                <span>
+                                                    <span>시네마 천국</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <a href="#">
+                                                <img src="/ottving/img/main_movie_thumb_04.jpg" alt="thumb04">
+                                                <span>
+                                                    <span>호로비츠를 위하여</span>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend">
+                        <div class="nav">
+                            <ul>
                                 <li><a href="#">추천 콘텐츠</a></li>
+                                <li><a href="#">&nbsp;| 시청 중 콘텐츠</a></li>
+                                <li><a href="#"> | 위시 콘텐츠</a></li>
+                                <li><a href="#"> | 인기 콘텐츠</a></li>
+                                <li><a href="#"> | 최신 콘텐츠</a></li>
                             </ul>
                         </div>
                         <div class="thumb">
@@ -407,28 +855,37 @@
         <footer>
             <div>
                 <div class="notice">
-                    <table border="1">
+                    <table border="0">
                         <tr>
-                            <td>공지사항</td>
-                            <td>공지사항 제목</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td><a href="#">공지사항 제목</a></td>
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="sitemap">
                     <ul>
-                        <li>회사소개</li>
-                        <li>서비스소개</li>
-                        <li>이용약관</li>
-                        <li>개인정보처리방침</li>
-                        <li>고객센터</li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-info">
                     <img src="/ottving/img/ottving_logo.png" alt="logo">
-                    <p></p>
+                    <p>
+                        OTTVING 주식회사 | 대표이사 이태현 ​</br>
+                        고객센터 1599-3709 (평일 09:00~18:00 / 점심시간 12:00~13:00 / 주말 및 공휴일 휴무)​ </br>
+                        사업자등록번호 220-88-38020 | 통신판매업 신고번호 : 제 2015-서울마포-0128호​ </br>
+                        통신판매업 정보 공개 : http://www.ftc.go.kr/bizCommPop.do?wrkr_no=220-88-38020​ </br>
+                        주소 서울특별시 마포구 상암산로 82, SBS 프리즘 타워 14층 | 전자우편주소 : helpdesk@wavve.com </br>
+                    </p>
                 </div>
             </div>
         </footer>
     </div>
 </body>
+<style>
+
+</style>
 </html>
