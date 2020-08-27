@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OTTVING | 오늘의 노는 법</title>
+    <title>OTTVING | VOD</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
@@ -12,112 +12,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="/ottving/css/style.css">
     <style>
-        main {}
-        main > section {
-            width: 1200px;
-            height: auto;
-            margin: 0 auto;
-            border: 1px solid blue;
-        }
-        main > section > .button {
-            border: 1px solid red;
-        }
-
-        main > section > .list {}
-        main > section > .list > span {
-            font-size: 17px;
-            font-weight: bold;
-        }
-        main > section > .list > div.content {
-            border: 1px solid blue;
-            margin-bottom: 70px;
-        }
-        main > section > .list > div.content > ul {
-            width: 1100px;
-            margin: 0 50px;
-            display: flex;
-            justify-content: space-between;
-            border: 1px solid red;
-        }
-        main > section > .list > div.content > ul > li {
-            display: inline-block;
-            width: 200px;
-            border: 1px solid green;
-        }
-        main > section > .list > div.content > ul > li > a {}
-        main > section > .list > div.content > ul > li > a > img {
-            width: 100%;
-        }
-        main > section > .list > div.content > ul > li > div {}
-        main > section > .list > div.content > ul > li > div > div {}
-        main > section > .list > div.content > ul > li > div > div > span {}
-
-        main > section > .thema {}
-        main > section > .thema > div {
-            position: relative;
-            margin-top: 25px;
-        }
-        main > section > .thema > div > a {}
-        main > section > .thema > div > a > img {
-            border-radius: 7px;
-        }
-        main > section > .thema > div > div {
-            position: absolute;
-            top: 0;
-            left: 50px;
-            display: table;
-            vertical-align: middle;
-            line-height: 1;
-            height: 100%;
-            z-index: 10000;
-            color: #fafafa;
-        }
-        main > section > .thema > div > div > div {
-            display: table-cell;
-            vertical-align: middle;
-        }
-        main > section > .thema > div > div > div > .title {
-            font-size: 30px;
-            font-weight: bold;
-        }
-        main > section > .thema > div > div > .tag {}
-        main > section > .thema > div > div > .tag > span {}
-
-
     </style>
-    <script>
-        $(document).ready(function(){
-            $('.slider .slider-item').bxSlider({
-                pager: false
-            });
-        });
-    </script>
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <div class="top">
-                <div>
-                    <a href="#">홍길동</a>
-                    <a href="#">이용권</a>
-                    <a href="#">편성표</a>
-                    <a href="#">위시리스트</a>
+        <header class="sub-page">
+            <div id="top-gnb">
+                <div class="top-wrap">
+                    <nav id="topUtil" class="top-util">
+                        <ul>
+                            <li><a href="#">홍길동</a></li>
+                            <li><a href="#">이용권</a></li>
+                            <li><a href="#">편성표</a></li>
+                            <li><a href="#">위시리스트</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="gnb">
-                <div>
+            <div id="gnb">
+                <div class="inner-wrap">
                     <h1><a href="#">OTTVING</a></h1>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">LIVE</a></li>
-                            <li><a href="#">VOD</a></li>
-                            <li><a href="#">MOVIE</a></li>
-                        </ul>
+                    <nav id="gnbMenu" class="gnb-menu">
+                        <h2><a href="#">LIVE</a></h2>
+                        <h2><a href="#">VOD</a></h2>
+                        <h2><a href="#">MOVIE</a></h2>
+                    </nav>
+                    <div id="gnbUtil" class="gnb-util">
+                        <div id="gnbSearch">
+                            <div class="gnb-search-input">
+                                <input type="text" id="autocomplete" title="keyword" autocomplete="off">
+                            </div>
+                            <button class="btnSearch"><i class="fas fa-search fa-2x"></i></button>
+                        </div>
                     </div>
-                    <form action="#">
-                        <input type="text" name="search" value="검색">
-                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
                 </div>
             </div>
         </header>
@@ -131,18 +58,161 @@
                 
                 <!-- 리스트 -->
                 <div class="list">
-                    <span>전체</span>
-                    <span>
-                        <select name="genre">
-                            <option value="전체">전체</option>
-                            <option value="드라마">드라마</option>
-                            <option value="예능">예능</option>
-                            <option value="해외시리즈">해외시리즈</option>
-                            <option value="키즈/애니">키즈/애니</option>
-                            <option value="스포츠/취민">스포츠/취미</option>
-                        </select>
-                    </span>
+                    <div>
+                        <span>전체</span>
+                        <span>
+                            <select name="genre">
+                                <option value="전체">전체</option>
+                                <option value="드라마">드라마</option>
+                                <option value="예능">예능</option>
+                                <option value="해외시리즈">해외시리즈</option>
+                                <option value="키즈/애니">키즈/애니</option>
+                                <option value="스포츠/취민">스포츠/취미</option>
+                            </select>
+                        </span>
+                    </div>
                     <div class="content">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_01.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_02.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_03.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_04.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_05.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_01.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_02.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_03.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_04.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_05.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_01.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_02.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_03.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_04.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/ottving/img/list_vod_thumb_05.jpg" alt=""></a>
+                                <div>
+                                    <div>
+                                        <span>콘텐츠명</span>
+                                        <span> | 에피소드</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                         <ul>
                             <li>
                                 <a href="#"><img src="/ottving/img/list_vod_thumb_01.jpg" alt=""></a>
@@ -214,25 +284,31 @@
         <footer>
             <div>
                 <div class="notice">
-                    <table border="1">
+                    <table border="0">
                         <tr>
-                            <td>공지사항</td>
-                            <td>공지사항 제목</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td><a href="#">공지사항 제목</a></td>
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="sitemap">
                     <ul>
-                        <li>회사소개</li>
-                        <li>서비스소개</li>
-                        <li>이용약관</li>
-                        <li>개인정보처리방침</li>
-                        <li>고객센터</li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
                     </ul>
                 </div>
-                <div>
-                    <img src="#" alt="logo">
-                    <p></p>
+                <div class="footer-info">
+                    <img src="/ottving/img/ottving_logo.png" alt="logo">
+                    <p>
+                        OTTVING 주식회사 | 대표이사 이태현 ​</br>
+                        고객센터 1599-3709 (평일 09:00~18:00 / 점심시간 12:00~13:00 / 주말 및 공휴일 휴무)​ </br>
+                        사업자등록번호 220-88-38020 | 통신판매업 신고번호 : 제 2015-서울마포-0128호​ </br>
+                        통신판매업 정보 공개 : http://www.ftc.go.kr/bizCommPop.do?wrkr_no=220-88-38020​ </br>
+                        주소 서울특별시 마포구 상암산로 82, SBS 프리즘 타워 14층 | 전자우편주소 : helpdesk@wavve.com </br>
+                    </p>
                 </div>
             </div>
         </footer>

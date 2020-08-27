@@ -18,11 +18,18 @@ strong {
 }
 
 /* 헤더 */
-header {
+header.index-page {
     position: relative;
     width: 100%;
     min-width: 1300px;
     height: 230px;
+    background-color: #ff1f45;
+}
+header.sub-page {
+    position: relative;
+    width: 100%;
+    min-width: 1300px;
+    height: 110px;
     background-color: #ff1f45;
 }
 header > #top-gnb {
@@ -30,7 +37,7 @@ header > #top-gnb {
     top: 0;
     left: 0;
     width: 100%;
-    min-width: 1200px;
+    min-width: 1300px;
     height: 30px;
     margin: 0 auto;
     z-index: 20000;
@@ -71,7 +78,7 @@ header > #gnb {
     width: 100%;
     min-width: 1300px;
     height: 70px;
-    z-index: 1600;
+    z-index: 16000;
     pointer-events: none;
     background-color: rgba(255, 31, 69, .98);
     box-sizing: border-box;
@@ -175,6 +182,7 @@ header .gnb-util .btnSearch {
 /* 푸터 */
 footer {
     width: 100%;
+    min-width: 1300px;
     height: 300px;
     background-color: #353535;
 }
@@ -246,3 +254,603 @@ footer > div > .footer-info > p {
     line-height: 17px;
     color: #969697;
 }
+
+/* 메인 */
+/* main {
+    width: 100%;
+    min-width: 1300px;
+    background: #353535;
+} */
+
+main {
+    width: 100%px;
+    min-width: 1300px;
+    background: #353535;
+}
+main > section {
+    color: #fafafa;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 3.75rem 0 9.375rem;
+}
+
+.container {
+    width: 100%;
+    min-height: 1300px;
+    padding: 3.75rem 0 9.375rem;
+    background: #353535;
+}
+
+main .content {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+main .content > div {
+    border-top: 1px solid #969697;
+    margin-bottom: 30px;
+}
+
+/* 메인 - 슬라이더 */
+main > div > section {
+    position: relative;
+    width: 1200px;
+    top: -13px;
+    padding-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.bx-wrapper {
+    box-shadow: 0 0 0 #ccc;
+    border: 0 solid #fff;
+    background: transparent;
+    pointer-events: none;
+    position: relative;
+}
+.keyvisual-slider .bx-wrapper {
+    width: 1200px;
+    min-width: 1200px;
+    margin-top: -173px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.bx-wrapper .bx-viewport {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 30px;
+    margin-top: -30px;
+}
+.bx-wrapper .bx-viewport .bxslider {
+    display: block;
+    width: auto;
+    height: 420px;
+    pointer-events: visible;
+}
+.bx-wrapper .bx-viewport .bxslider > * {}
+.bx-wrapper .bxslider .keyvisual-slider-inner {}
+.bx-wrapper .bxslider .keyvisual-slider-inner .slider-item {}
+.bx-wrapper .bxslider .keyvisual-slider-inner .slider-item a {
+    position: relative;
+    display: inline-block;
+    width: 1200px;
+    height: 420px;
+    text-align: center;
+}
+.slider-item img {
+    border: 0;
+    top: 0;
+    left: .9375rem;
+    border-radius: .7rem;
+}
+.slider-item .slider-item_info {
+    position: absolute;
+    width: 100%;
+    bottom: 3.75rem;
+    left: 0;
+    text-align: center;
+}
+.slider-item .slider-item_info .title {
+    width: 43.75rem;
+    height: auto;
+    overflow: inherit;
+    margin: 0 auto;
+    font-size: 2.25rem;
+    line-height: 100%;
+    font-weight: 700;
+}
+.slider-item .slider-item_info .sub {
+    opacity: 1;
+    width: 43.75rem;
+    height: auto;
+    overflow: inherit;
+    margin-top: 1.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.25rem;
+    color: #fff;
+    line-height: 100%;
+    display: block;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    /* z-index: 1000; */
+}
+
+/* 메인 - 내비게이터 */
+main .content .nav {
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+}
+main .content .nav > ul {}
+main .content .nav > ul > li {
+    display: inline-block;
+}
+main .content .nav > ul > li > a {
+    font-size: 16px;
+}
+main .content .nav > ul > li:first-child > a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 메인 - 썸네일 */
+main .thumb {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+main .thumb > div {
+    display: inline-block;
+}
+main .thumb > div:nth-of-type(1) {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fafafa;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+main .thumb > div > ul {
+    padding-left: 100px;
+    display: inline;
+}
+main .thumb > div > ul > li {
+    display: inline-block;
+    width: 250px;
+    margin: 15px 5px;
+    box-sizing: border-box;
+    background-color: #969696;
+}
+main .thumb > div > ul > li > div {}
+main .thumb > div > ul > li > div > a {}
+main .thumb > div > ul > li > div > a > img {
+    width: 100%;
+    height: 100%;
+}
+main .thumb > div > ul > li > div > a > span {
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+/* 메인 - 리스트 - 테마 */
+main > section > .button {
+    padding: 17px 0;
+}
+main > section > .button > button {
+    border: 0;
+    font-size: 15px;
+    width: 70px;
+    height: 32px;
+    margin: 10px 0;
+    padding: 5px;
+    line-height: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-right: .4375rem;
+    margin-bottom: .625rem;
+    background-color: #ededed;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+main > section > .recommend {
+    width: 100%;
+    border-bottom: 1px solid #969696;
+    padding-bottom: 70px;
+}
+main > section > .recommend > span {
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fafafa;
+}
+main > section > .recommend > div.content {
+
+}
+main > section > .recommend > div.content > ul {
+    margin-top: 15px;
+    margin-left: 45px;
+}
+main > section > .recommend > div.content > ul > li {
+    display: inline-block;
+    width: 250px;
+    margin: 0 10px;
+    background-color: #969696;
+}
+main > section > .recommend > div.content > ul > li > a {}
+main > section > .recommend > div.content > ul > li > a > img {
+    width: 100%;
+}
+main > section > .recommend > div.content > ul > li > div {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+main > section > .recommend > div.content > ul > li > div > div {
+    line-height: 25px;
+    height: 25px;
+    width: 100%;
+}
+main > section > .recommend > div.content > ul > li > div > div > span {}
+.content .content-info {
+    display: block;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+main > section > .thema {
+    padding-top: 70px;
+}
+main > section > .thema > div {
+    position: relative;
+    margin-bottom: 30px;
+}
+main > section > .thema > div > a {}
+main > section > .thema > div > a > img {
+    border-radius: 7px;
+}
+main > section > .thema > div > div {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    display: table;
+    vertical-align: middle;
+    line-height: 1;
+    height: 100%;
+    z-index: 10000;
+    color: #fafafa;
+}
+main > section > .thema > div > div > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+main > section > .thema > div > div > div > .title {
+    font-size: 30px;
+    font-weight: bold;
+}
+main > section > .thema > div > div > .tag {}
+main > section > .thema > div > div > .tag > span {}
+
+/* 메인 - 리스트 - 장르 */
+main {}
+main > section {
+    color: #fafafa;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 3.75rem 0 9.375rem;
+}
+
+main > section > .button {
+    padding: 17px 0;
+}
+main > section > .button > button {
+    border: 0;
+    font-size: 15px;
+    width: 70px;
+    height: 32px;
+    margin: 10px 0;
+    padding: 5px;
+    line-height: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-right: .4375rem;
+    margin-bottom: .625rem;
+    background-color: #ededed;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+main > section > .list {
+    position: relative;
+}
+main > section > .list > div {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+main > section > .list > div  > span {
+    display: block;
+    width: 100px;
+    height: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fafafa;
+    padding: 8px 60px 8px 20px;
+}
+
+.list > div > span > select {
+    position: absolute;
+    display: block;
+    width: 210px;
+    height: 40px;
+    padding: 8px 60px 8px 20px;
+    font-size: 17px;
+    top: 0;
+    right: 0;
+    background-color: #252525;
+    color: #a5a5a5;
+}
+
+main > section > .list > div.content {
+    margin-bottom: 70px;
+}
+main > section > .list > div.content > ul {
+    width: 1100px;
+    margin: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+main > section > .list > div.content > ul:nth-of-type(1) {
+    margin-top: 0;
+}
+main > section > .list > div.content > ul > li {
+    display: inline-block;
+    width: 200px;
+    background-color: #969696;
+}
+main > section > .list > div.content > ul > li > a {}
+main > section > .list > div.content > ul > li > a > img {
+    width: 100%;
+}
+main > section > .list > div.content > ul > li > div {
+    width: 100%;
+    height: 30px;
+    margin-left: 5px;
+}
+main > section > .list > div.content > ul > li > div > div {}
+main > section > .list > div.content > ul > li > div > div > span {}
+
+/* 페이지 내비게이션 */
+.paging {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.paging > span > a {
+    color:#777;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+.paging > span > a:hover {
+    text-decoration: underline;
+}
+
+.paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 10px;
+    padding: 8px 9px;
+    background: url() 0 0 repeat-x;
+    color: #fafafa;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+.paging > .num > a:hover {
+    text-decoration: underline;
+}
+.paging > .num > a.on {
+    width: 14px;
+    height: 14px;
+    
+    color: #fe434c;
+    font-weight: bold;
+}
+
+/* 메인 - 뷰(vod) */
+main > section > .vod-bottom {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+main > section > .vod-bottom > .vod-info {
+    width: 100%;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #969696;
+}
+main > section > .vod-bottom > .vod-info > div {
+    padding: 7px 0;
+}
+main > section > .vod-bottom > .vod-info > div:nth-of-type(1) {
+    font-size: 20px ;
+    font-weight: bold;
+}
+main > section > .vod-bottom > .vod-info > div:nth-of-type(2) > span {
+    font-size: 17px;
+    margin-right: 2px;
+}
+main > section > .vod-bottom > .vod-info > div > span {}
+main > section > .vod-bottom > .vod-info > div:nth-of-type(3) > p {
+    position: relative;
+    overflow: hidden;
+}
+main > section > .vod-bottom > .vod-info > div:nth-of-type(3) > p > span {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 25px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+main > section > .vod-bottom > .vod-info > div:nth-of-type(3) > p > span:nth-of-type(1) {
+    float: left;
+    width: 7%;
+}
+main > section > .vod-bottom > .vod-info > div:nth-of-type(3) > p > span:nth-of-type(2) {
+    float: left;
+    width: 93%;
+}
+
+main > section > .vod-bottom > .vod-episode {
+    padding-top: 40px;
+}
+main > section > .vod-bottom > .vod-episode > div {
+    position: relative;
+}
+main > section > .vod-bottom > .vod-episode > div > span {
+    font-size: 17px;
+    font-weight: bold;
+}
+main > section > .vod-bottom > .vod-episode > div > span:nth-of-type(1) {
+    padding-left: 7px;
+}
+main > section > .vod-bottom > .vod-episode > div > span > select {
+    position: absolute;
+    top: -3px;
+    right: 10px;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    padding: 3px;
+    background: #252525;
+    color: #a5a5a5;
+}
+main > section > .vod-bottom > .vod-episode > div > span > select > option {
+    font-size: 15px;
+}
+
+main > section > .vod-bottom > .vod-episode > div > ul {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #969696;
+    box-sizing: border-box;
+}
+main > section > .vod-bottom > .vod-episode > div > ul:last-of-type {
+    border-bottom: 0;
+    padding-bottom: 30px;
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li {
+    float: left;
+    display: block;
+    width: 50%;
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li > div {
+    float: left;
+    display: block;
+    width: 50%;
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li > div img {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li > div:nth-of-type(2) {
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li > div > span {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 5px;
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li > div > span:nth-of-type(1) {
+    font-size: 17px;
+    /* font-weight: bold; */
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li > div > span:nth-of-type(3) {
+    white-space: normal;
+    line-height: 1.2;
+    height: 3.6em;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+main > section > .vod-bottom > .vod-episode > div > ul > li > div > span:nth-of-type(4) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* 페이지 내비게이션 */
+.paging {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.paging > span > a {
+    color:#777;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+.paging > span > a:hover {
+    text-decoration: underline;
+}
+
+.paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 10px;
+    padding: 8px 9px;
+    background: url() 0 0 repeat-x;
+    color: #fafafa;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+}
+.paging > .num > a:hover {
+    text-decoration: underline;
+}
+.paging > .num > a.on {
+    width: 14px;
+    height: 14px;
+    color: #fe434c;
+    font-weight: bold;
+}
+
+/* video player */
+main > section > .vod-player {
+    background: #0f0f0f;
+    width: 100%;
+    height: auto;
+}
+.vod-player > div {
+    width: 1200px;
+    margin: 0 auto;
+}
+.vod-player > div > div {}
