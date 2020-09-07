@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WATFLIX | VOD</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/watflix/css/style.css">
+    <style>
+/* VOD - 테마 */
+#vod-main > .container {} 
+#vod-main > .container > .content > div {} 
+
+#vod-main > .container > .content > .button {
+    padding: 17px 0;
+}
+#vod-main > .container > .content > .button > button {
+    border: 0;
+    width: 70px;
+    height: 32px;
+    margin: 10px 0;
+    padding: 5px;
+    line-height: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-right: .4375rem;
+    margin-bottom: .625rem;
+    background-color: #242424;
+}
+#vod-main > .container > .content > .button > button > a {
+    font-size: 15px;
+    color: #fff;
+}
+
+#vod-main > .container > .content > .recommend {
+    width: 100%;
+    border-bottom: 1px solid #969696;
+    padding-bottom: 50px;
+}
+#vod-main > .container > .content > .recommend > span {
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+}
+
+#vod-main .recommend > .recommend-list {}
+#vod-main .recommend > .recommend-list > ul {
+    margin: 20px 0;
+    text-align: center;
+}
+#vod-main .recommend > .recommend-list > ul > li {
+    display: inline-block;
+    width: 250px;
+    margin: 0 10px;
+    background-color: #242424;
+}
+#vod-main .recommend > .recommend-list > ul > li > a {}
+#vod-main .recommend > .recommend-list > ul > li > a > img {
+    width: 100%;
+}
+#vod-main .recommend > .recommend-list > ul > li > div {
+    width: 100%;
+    padding: 5px;
+}
+#vod-main .recommend > .recommend-list > ul > li > div > div {
+    text-align: left;
+    line-height: 25px;
+    height: 25px;
+    width: 100%;
+    font-size: 13px;
+    color: #fff;
+}
+#vod-main .recommend > .recommend-list > ul > li > div > div > span {}
+
+#vod-main .recommend > .recommend-list .list-info {
+    display: block;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+#vod-main .thema {
+    padding-top: 70px;
+}
+#vod-main .thema > div {
+    position: relative;
+    margin-bottom: 30px;
+}
+#vod-main .thema > div > a {}
+#vod-main .thema > div > a > img {
+    border-radius: 7px;
+}
+#vod-main .thema > div > div {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    display: table;
+    vertical-align: middle;
+    line-height: 1.5rem;
+    height: 100%;
+    z-index: 10000;
+    color: #fafafa;
+}
+#vod-main .thema > div > div > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+#vod-main .thema > div > div > div > .title {
+    line-height: 1.5rem;
+    font-size: 30px;
+    font-weight: bold;
+}
+#vod-main .thema > div > div > .tag {}
+#vod-main .thema > div > div > .tag > span {}
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="sub-header">
+            <div class="top-gnb">
+                <div class="top-wrap">
+                    <nav class="top-menu">
+                        <ul>
+                            <li><a href="#">유효진</a></li>
+                            <li><a href="#">이용권</a></li>
+                            <li><a href="#">편성표</a></li>
+                            <li><a href="#">위시리스트</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="gnb">
+                <div class="gnb-wrap">
+                    <h1><a href="/watflix/index.html">Watflix</a></h1>
+                    <nav class="gnb-menu">
+                        <h2><a href="#">VOD</a></h2>
+                        <h2><a href="#">MOVIE</a></h2>
+                        <h2><a href="#">LIVE</a></h2>
+                        <h2><a href="#">MALL</a></h2>
+                    </nav>
+                    <div class="gnb-util">
+                        <div class="gnb-search">
+                            <div class="gnb-search-input">
+                                <input type="text" id="autocomplete" title="keyword" autocomplete="off">
+                            </div>
+                            <button class="btnSearch"><i class="fas fa-search fa-2x"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="vod-main">
+            <section class="container">
+                <div class="content">
+                    <!-- 테마/장르 선택 -->
+                    <div class="button">
+                        <button type="button"><a href="/watflix/vod/thema.html">테마</a></button>
+                        <button type="button"><a href="/watflix/vod/genre.html">장르</a></button>
+                    </div>
+                    
+                    <!-- 추천 리스트 -->
+                    <div class="recommend">
+                        <span><span>유효진</span> 님이 좋아할 만한 방송</span>
+                        <div class="recommend-list">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_thema_thumb_01.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>여름방학</span>
+                                            <span> | 8화</span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">무료한 일상의 활력소가 되어줄 재미 보장! ‘여름방학’ 여덟 번째 이야기</span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">출연 : 정유미, 최우식 </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_thema_thumb_02.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>[무삭제판] 우아한 친구들</span>
+                                            <span> | 16화</span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">해숙(한다감 분)이 모든 증거들을 갖고 한 줌의 재로 사라졌다는 소식을 들은 ‘불사조’ 4인방은 그 사실을 믿기 어려워한다. </span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">출연 : 유준상, 송윤아, 배수빈, 한다감 </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_thema_thumb_03.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>JTBC 뉴스룸</span>
+                                            <span></span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">사실, 공정, 균형, 품위! 한걸음 더 들어가는 뉴스, JTBC 뉴스룸에서는 진실이 뉴스가 됩니다.</span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">출연 : 서복현, 안나경, 한민용 </span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_thema_thumb_04.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>히든싱어 6</span>
+                                            <span> | 5화</span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">‘RAIN IS BACK’ 화려한 조명과 함께 찾아온 월드 스타, 비!</span>
+                                        </div>
+                                        <div>
+                                            <span class="list-info">출연 : 전현무 </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 테마 리스트 -->
+                    <div class="thema">
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_02.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">슈퍼스타 이효리의</br>레전드 리얼리티</span>
+                                    <div class="tag">
+                                        <span>#오프터레코드 #골든12 #이효리의X언니</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"><img src="/ottving/img/vod_list_thema_01.jfif" alt=""></a>
+                            <div>
+                                <div>
+                                    <span class="title">8월, OTTVING의 선택</span>
+                                    <div class="tag">
+                                        <span>#비밀의숲2 #히든싱어6 #나홀로이식당</span>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+        <footer id="index-footer">
+            <div>
+                <div class="notice">
+                    <table border="0">
+                        <tr>
+                            <td><a href="#">공지사항</a></td>
+                            <td><a href="#">공지사항 제목</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sitemap">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <img src="/watflix/img/logo_777.png" alt="logo">
+                    <p>
+                        WATFLIX 주식회사 | 대표이사 홍길동 ​| 고객센터 1599-3709 (평일 09:00~18:00 / 점심시간 12:00~13:00 / 주말 및 공휴일 휴무)​ </br>
+                        사업자등록번호 220-88-38020 | 통신판매업 신고번호 : 제 2015-서울마포-0128호​ | 통신판매업 정보 공개 : http://www.ftc.go.kr/bizCommPop.do?wrkr_no=220-88-38020​ </br>
+                        주소 서울특별시 마포구 상암산로 82, SBS 프리즘 타워 14층 | 전자우편주소 : helpdesk@watflix.com </br>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

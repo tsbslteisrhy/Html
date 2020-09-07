@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTTVING | VOD</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jwplayer.com/libraries/pSb7YaRi.js"></script>
+    <script>jwplayer.key='9s8VNUUpwwNBa2pxt2BF0EXeNDY7UR4s1TjvbfssvMg8gzmNTJFF3kp+hcUcUq/H';</script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="/ottving/css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header class="sub-page">
+            <div id="top-gnb">
+                <div class="top-wrap">
+                    <nav id="topUtil" class="top-util">
+                        <ul>
+                            <li><a href="#">홍길동</a></li>
+                            <li><a href="#">이용권</a></li>
+                            <li><a href="#">편성표</a></li>
+                            <li><a href="#">위시리스트</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="gnb">
+                <div class="inner-wrap">
+                    <h1><a href="#">OTTVING</a></h1>
+                    <nav id="gnbMenu" class="gnb-menu">
+                        <h2><a href="#">LIVE</a></h2>
+                        <h2><a href="#">VOD</a></h2>
+                        <h2><a href="#">MOVIE</a></h2>
+                    </nav>
+                    <div id="gnbUtil" class="gnb-util">
+                        <div id="gnbSearch">
+                            <div class="gnb-search-input">
+                                <input type="text" id="autocomplete" title="keyword" autocomplete="off">
+                            </div>
+                            <button class="btnSearch"><i class="fas fa-search fa-2x"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="vod-view">
+                <section class="vod-player">
+                    <div>
+                        <div id="player">Loading player ...</div>
+                        <script>
+                           const player = jwplayer('player').setup({
+                           file: 'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4',
+                           title: 'Sample',
+                           image: 'https://img.wavve.com/202008/20200827/16731d343ee65c8427cdb48c5ef294d9.jpg'
+                        //    height: "",
+                        //    width: "",
+                        //    autostart: true
+                           });
+                        </script>
+                    </div>
+                </section>
+            <section class="vod-bottom">
+                <div class="vod-info">
+                    <div>콘텐츠명</div>
+                    <div>
+                        <span>에피소드</span>
+                        <span>| 2020-08-12 (수)</span>
+                        <span>| 예능</span>
+                        <span>| 80분</span>
+                        <span>| 12세</span>
+                    </div>
+                    <div>
+                        <p>
+                            <span>· 개요</span>
+                            <span>드라마, tvN, 토/일 오후 9:00</span>
+                        </p>
+                        <p>
+                            <span>· 출연</span>
+                            <span>조승우, 배두나, 전혜진, 최무성, 이준혁, 윤세아</span>
+                        </p>
+                        <p>
+                            <span>· 연출</span>
+                            <span>박현석</span>
+                        </p>
+                        <p>
+                            <span>· 줄거리</span>
+                            <span>′′침묵을 원하는 자, 모두가 공범이다.′′ 
+                                검경 수사권 조정 최전선의 대척점에서 다시 만난 고독한 검사 황시목(조승우)과 행동파 형사 한여진(배두나)이, 
+                                은폐된 사건들의 진실로 다가가는 내부 비밀 추적극</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="vod-episode">
+                    <div>
+                        <span>에피소드</span>
+                        <span>
+                            <select>
+                                <option value="latest">최신회부터</option>
+                                <option value="first">첫회부터</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>
+                                        세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 
+                                        맹세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인, 나나, 안내상, 안길강</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                        </ul>                        
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                        </ul>                        
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                        </ul>                        
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                        </ul>                        
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><img src="/ottving/img/vod_episode_thumb_01.jpg" alt=""></a>
+                                </div>
+                                <div>
+                                    <span>출사표</span>
+                                    <span>14회 | 2020-08-13 (목)</span>
+                                    <span>세라(나나)는 맹덕(안내상)을 찾아가 사랑리조트 화재 사고 추모비 이전을 건의하고, 맹</span>
+                                    <span>출연: 나나, 안내상, 안길강, 배해선, 유다인</span>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <!-- 페이지 내비게이션 -->
+                        <div class="paging">
+                            <span class="prev">
+                                <a href="#">〈&nbsp;</a>
+                            </span>
+                            <span class="num">
+                                <a href="#" class="on">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                            </span>
+                            <span class="next">
+                                <a href="#">&nbsp;〉</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </section>
+            
+        </main>
+        <footer>
+            <div>
+                <div class="notice">
+                    <table border="0">
+                        <tr>
+                            <td><a href="#">공지사항</a></td>
+                            <td><a href="#">공지사항 제목</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sitemap">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <img src="/ottving/img/ottving_logo.png" alt="logo">
+                    <p>
+                        OTTVING 주식회사 | 대표이사 이태현 ​</br>
+                        고객센터 1599-3709 (평일 09:00~18:00 / 점심시간 12:00~13:00 / 주말 및 공휴일 휴무)​ </br>
+                        사업자등록번호 220-88-38020 | 통신판매업 신고번호 : 제 2015-서울마포-0128호​ </br>
+                        통신판매업 정보 공개 : http://www.ftc.go.kr/bizCommPop.do?wrkr_no=220-88-38020​ </br>
+                        주소 서울특별시 마포구 상암산로 82, SBS 프리즘 타워 14층 | 전자우편주소 : helpdesk@wavve.com </br>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<style>
+
+</style>
+</html>
