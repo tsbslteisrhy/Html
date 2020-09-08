@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watflix | Member</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="/watflix/css/member.css">
+    <style>
+        #root {
+            width: 100%;
+            height: 100%;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        main {}
+        main .wallpaper {}
+
+        main > .wallpaper:nth-of-type(1) {
+            height: 100vh;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('/watflix/img/beforeLog_wallpaper_01.jpg') no-repeat center/cover;
+        }
+        main > .wallpaper:nth-of-type(1)::before {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: url('/watflix/img/beforeLog_wallpaper_01.jpg') no-repeat center/cover;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        main > .wallpaper:nth-of-type(1)::after {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: rgb(0, 0, 0);
+            opacity: 0.6;
+        }
+        main > .wallpaper:nth-of-type(2) {
+            height: 100vh;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('/watflix/img/beforeLog_wallpaper_02.jpg') no-repeat center/cover;
+        }
+        main > .wallpaper:nth-of-type(2)::before {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: url('/watflix/img/beforeLog_wallpaper_02.jpg') no-repeat center/cover;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        main > .wallpaper:nth-of-type(2)::after {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: rgb(0, 0, 0);
+            opacity: 0.6;
+        }
+        main > .wallpaper:nth-of-type(3) {
+            height: 100vh;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('/watflix/img/beforeLog_wallpaper_03.jpg') no-repeat center/cover;
+        }
+        main > .wallpaper:nth-of-type(3)::before {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: url('/watflix/img/beforeLog_wallpaper_03.jpg') no-repeat center/cover;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        main > .wallpaper:nth-of-type(3)::after {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: rgb(0, 0, 0);
+            opacity: 0.6;
+        }
+        main > .wallpaper:nth-of-type(4) {
+            height: 100vh;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('/watflix/img/beforeLog_wallpaper_04.jpg') no-repeat center/cover;
+        }
+        main > .wallpaper:nth-of-type(4)::before {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: url('/watflix/img/beforeLog_wallpaper_04.jpg') no-repeat center/cover;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        main > .wallpaper:nth-of-type(4)::after {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: rgb(0, 0, 0);
+            opacity: 0.6;
+        }
+        main > .wallpaper:nth-of-type(5) {
+            height: 100vh;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background: url('/watflix/img/beforeLog_wallpaper_05.jpg') no-repeat center/cover;
+        }
+        main > .wallpaper:nth-of-type(5)::before {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            background: url('/watflix/img/beforeLog_wallpaper_05.jpg') no-repeat center/cover;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+        main > .wallpaper:nth-of-type(5)::after {
+            box-sizing: border-box;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: rgb(0, 0, 0);
+            opacity: 0.6;
+        }
+
+        main > .wallpaper > .wallpaper-inner {
+            position: relative;
+            top: 150px;
+            z-index: 100;
+            text-align: center;
+        }
+        main > .wallpaper > .wallpaper-inner > h3 {}
+        main > .wallpaper > .wallpaper-inner > h3 > span {
+            font-size: 27px;
+            font-weight: bold;
+        }
+        main > .wallpaper > .wallpaper-inner > h4 {}
+        main > .wallpaper > .wallpaper-inner > div {}
+        main > .wallpaper > .button {}
+
+        
+    </style>
+
+</head>
+<body>
+    <div id="root">
+        <header></header>
+        <main>
+            <div class="wallpaper">
+                <div class="wallpaper-inner">
+                    <h3>
+                        <span>영화, 드라마, 예능, 다큐멘터리를 무제한으로</br></span>
+                    </h3>
+                    <h4>매주 5백 여편의 신작이 업데이트 되며, 추가 요금은 전혀 없어요.</h4>
+                    <div class="btnStart"><a href="#">2주 무료 이용 시작</a></div>
+                </div>
+                <div class="btnDown"></div>
+            </div>
+            <div class="wallpaper">
+                <div class="wallpaper-inner">
+                    <h3>
+                        <span>여럿이 함께, 하나의 이용권으로</br></span>
+                    </h3>
+                    <h4>동시 4개 기기에서 재생이 가능한 프리미엄 이용권을 이용해보세요.</h4>
+                    <div class="btnStart"><a href="#">2주 무료 이용 시작</a></div>
+                </div>
+                <div class="btnDown"></div>
+            </div>
+            <div class="wallpaper">
+                <div class="wallpaper-inner">
+                    <h3>
+                        <span>이제 TV로 최고의 화질을 경험하세요</br></span>
+                    </h3>
+                    <h4>최대 Ultra HD 4K 해상도로 생생한 감동을 느껴보세요.</h4>
+                    <div class="btnStart"><a href="#">2주 무료 이용 시작</a></div>
+                </div>
+                <div class="btnDown"></div>
+            </div>
+            <div class="wallpaper">
+                <div class="wallpaper-inner">
+                    <h3>
+                        <span>이동 중에도 감상을 멈추지 마세요</br></span>
+                    </h3>
+                    <h4>보고 싶은 콘텐츠를 다운로드하여 오프라인으로 즐기세요.</h4>
+                    <div class="btnStart"><a href="#">2주 무료 이용 시작</a></div>
+                </div>
+                <div class="btnDown"></div>
+            </div>
+            <div class="wallpaper">
+                <div class="wallpaper-inner">
+                    <h3>
+                        <span>스마트폰, 태블릿, TV, PC, 크롬캐스트, Android TV에서</br></span>
+                    </h3>
+                    <h4>8만여 편의 작품을 무제한 스트리밍하세요.</h4>
+                    <div class="btnStart"><a href="#">2주 무료 이용 시작</a></div>
+                </div>
+                <div class="btnDown"></div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
