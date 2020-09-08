@@ -15,9 +15,9 @@ a {text-decoration: none; color: #fff;}
 }
 
 /* 공통 */
-.bx-wrapper .bx-next {
+/* .bx-wrapper .bx-next {
     background: url(/watflix/img/btn_slider_next.png);
-}
+} */
 
 /* 헤더 */
 #index-header {
@@ -213,7 +213,7 @@ main > .container > .content {
 #index-main > .container > .keyvisual-slider {
     top: -13px;
 }
-#index-main .bx-wrapper {
+main .bx-wrapper {
     position: relative;
     box-shadow: 0 0 0 #ccc;
     border: 0;
@@ -359,60 +359,60 @@ main > .container > .content {
 #index-main .thumb .thumb-slider ul > li > div > a > span > span {}
 
 /* 푸터 */
-#index-footer {
+footer {
     width: 100%;
     min-width: 1300px;
     height: 300px;
 }
-#index-footer > div {
+footer > div {
     width: 1200px;
     height: auto;
     margin: 0 auto;
 }
-#index-footer > div > .notice {
+footer > div > .notice {
     width: 100%;
     height: auto;
     border-top: 1px solid #777;
     border-bottom: 1px solid #777;
 }
-#index-footer > div > .notice > table {
+footer > div > .notice > table {
     width: 100%;
     border-collapse: collapse;
 }
-#index-footer > div > .notice > table tr {}
-#index-footer > div > .notice > table tr > td {
+footer > div > .notice > table tr {}
+footer > div > .notice > table tr > td {
     padding: 7px;
     box-sizing: border-box;
 }
-#index-footer > div > .notice > table tr > td > a {
+footer > div > .notice > table tr > td > a {
     font-size: 13px;
     font-weight: 500;
     color: #fff;
 }
-#index-footer > div > .notice > table tr > td:nth-of-type(1) {
+footer > div > .notice > table tr > td:nth-of-type(1) {
     width: 10%;
     text-align: center;
 }
-#index-footer > div > .notice > table tr > td:nth-of-type(2) {
+footer > div > .notice > table tr > td:nth-of-type(2) {
     width: 90%;
 }
 
-#index-footer > div > .sitemap {
+footer > div > .sitemap {
     width: 100%;
     height: auto;
     padding: 15px;
     box-sizing: border-box;
     
 }
-#index-footer > div > .sitemap > ul {}
-#index-footer > div > .sitemap > ul > li {
+footer > div > .sitemap > ul {}
+footer > div > .sitemap > ul > li {
     display: inline-block;
     margin-right: 40px;
 }
-#index-footer > div > .sitemap > ul > li:nth-of-type(1) {
+footer > div > .sitemap > ul > li:nth-of-type(1) {
     margin-left: 20px;
 }
-#index-footer > div > .sitemap > ul > li > a {
+footer > div > .sitemap > ul > li > a {
     font-size: 13px;
     font-weight: 900;
     color: #777;
@@ -437,3 +437,111 @@ footer > div > .footer-info > p {
     line-height: 17px;
     color: #777;
 }
+
+/* VOD - 테마 */
+#vod-main > .container {
+    color: #fff;
+} 
+#vod-main > .container > .content > div {} 
+
+#vod-main > .container > .content > .button {
+    padding: 17px 0;
+}
+#vod-main > .container > .content > .button > button {
+    border: 0;
+    width: 70px;
+    height: 32px;
+    margin: 10px 0;
+    padding: 5px;
+    line-height: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-right: .4375rem;
+    margin-bottom: .625rem;
+    background-color: #242424;
+}
+#vod-main > .container > .content > .button > button > a {
+    font-size: 15px;
+    color: #fff;
+}
+
+#vod-main > .container > .content > .recommend {
+    width: 100%;
+    border-bottom: 1px solid #969696;
+}
+#vod-main > .container > .content > .recommend > span {
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+}
+
+#vod-main .recommend > .recommend-list {}
+#vod-main .recommend > .recommend-list ul {
+    margin: 20px 0;
+    text-align: center;
+}
+#vod-main .recommend > .recommend-list ul > li {
+    display: inline-block;
+    width: 250px;
+    margin: 0 10px;
+    background-color: #242424;
+}
+#vod-main .recommend > .recommend-list ul > li > a {}
+#vod-main .recommend > .recommend-list ul > li > a > img {
+    width: 100%;
+}
+#vod-main .recommend > .recommend-list ul > li > div {
+    width: 100%;
+    padding: 5px;
+}
+#vod-main .recommend > .recommend-list ul > li > div > div {
+    text-align: left;
+    line-height: 25px;
+    height: 25px;
+    width: 100%;
+    font-size: 13px;
+    color: #fff;
+}
+#vod-main .recommend > .recommend-list ul > li > div > div > span {}
+
+#vod-main .recommend > .recommend-list .list-info {
+    display: block;
+    line-height: 25px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+#vod-main .thema {
+    padding-top: 85px;
+}
+#vod-main .thema > div {
+    position: relative;
+    margin-bottom: 30px;
+}
+#vod-main .thema > div > a {}
+#vod-main .thema > div > a > img {
+    border-radius: 7px;
+}
+#vod-main .thema > div > div {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    display: table;
+    vertical-align: middle;
+    line-height: 1.5rem;
+    height: 100%;
+    z-index: 10000;
+    color: #fafafa;
+}
+#vod-main .thema > div > div > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+#vod-main .thema > div > div > div > .title {
+    line-height: 1.5rem;
+    font-size: 30px;
+    font-weight: bold;
+}
+#vod-main .thema > div > div > .tag {}
+#vod-main .thema > div > div > .tag > span {}

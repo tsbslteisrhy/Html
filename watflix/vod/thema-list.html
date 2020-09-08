@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watflix</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="/watflix/css/style.css">
+    <style>
+        /* 메인 - 리스트 - 장르 */
+        #vod-main > .container > .content > .content-list {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        #vod-main > .container > .content > .content-list > div {
+            width: 100%;
+            height: auto;
+        }
+        #vod-main > .container > .content > .content-list > div:nth-of-type(1) {
+            margin-bottom: 20px;
+        }
+        #vod-main > .container > .content > .content-list > div > span {
+            display: block;
+            width: 300px;
+            height: 100%;
+            font-size: 17px;
+            font-weight: 900;
+            color: #fff;
+            padding: 8px 60px 8px 20px;
+        }
+        .content-list > div > span > select {
+            position: absolute;
+            display: block;
+            width: 210px;
+            height: 40px;
+            padding: 8px 60px 8px 20px;
+            font-size: 17px;
+            top: 0;
+            right: 0;
+            background-color: #252525;
+            color: #a5a5a5;
+        }
+
+        .content-list > div.thumb {
+            margin-bottom: 70px;
+        }
+        .content-list > div.thumb > ul {
+            width: 1100px;
+            margin: 40px 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content-list > div.thumb > ul:nth-of-type(1) {
+            margin-top: 0;
+        }
+        .content-list > div.thumb > ul > li {
+            display: inline-block;
+            width: 200px;
+            background-color: #242424;
+        }
+        .content-list > div.thumb > ul > li > a {}
+        .content-list > div.thumb > ul > li > a > img {
+            width: 100%;
+        }
+        .content-list > div.thumb > ul > li > div {
+            width: 100%;
+            height: 30px;
+            margin-left: 5px;
+        }
+        .content-list > div.thumb > ul > li > div > div {}
+        .content-list > div.thumb > ul > li > div > div > span {}
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="sub-header">
+            <div class="top-gnb">
+                <div class="top-wrap">
+                    <nav class="top-menu">
+                        <ul>
+                            <li><a href="#">유효진</a></li>
+                            <li><a href="#">이용권</a></li>
+                            <li><a href="#">편성표</a></li>
+                            <li><a href="#">위시리스트</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="gnb">
+                <div class="gnb-wrap">
+                    <h1><a href="/watflix/index.html">Watflix</a></h1>
+                    <nav class="gnb-menu">
+                        <h2><a href="/watflix/vod/thema.html">VOD</a></h2>
+                        <h2><a href="#">MOVIE</a></h2>
+                        <h2><a href="#">LIVE</a></h2>
+                        <h2><a href="#">MALL</a></h2>
+                    </nav>
+                    <div class="gnb-util">
+                        <div class="gnb-search">
+                            <div class="gnb-search-input">
+                                <input type="text" id="autocomplete" title="keyword" autocomplete="off">
+                            </div>
+                            <button class="btnSearch"><i class="fas fa-search fa-2x"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="vod-main">
+            <section class="container">
+                <div class="content">
+                    <!-- 테마/장르 선택 -->
+                    <div class="button">
+                        <button type="button"><a href="/watflix/vod/thema.html">테마</a></button>
+                        <button type="button"><a href="/watflix/vod/genre.html">장르</a></button>
+                    </div>
+                
+                    <!-- 리스트 -->
+                    <div class="content-list">
+                        <div>
+                            <span>8월, OTTVING의 선택!</span>
+                            <!-- <span>
+                                <select name="genre">
+                                    <option value="전체">전체</option>
+                                    <option value="드라마">드라마</option>
+                                    <option value="예능">예능</option>
+                                    <option value="해외시리즈">해외시리즈</option>
+                                    <option value="키즈/애니">키즈/애니</option>
+                                    <option value="스포츠/취민">스포츠/취미</option>
+                                </select>
+                            </span> -->
+                        </div>
+                        <div class="thumb">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_list_thumb_01.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>콘텐츠명</span>
+                                            <span> | 에피소드</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_list_thumb_02.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>콘텐츠명</span>
+                                            <span> | 에피소드</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_list_thumb_03.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>콘텐츠명</span>
+                                            <span> | 에피소드</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_list_thumb_04.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>콘텐츠명</span>
+                                            <span> | 에피소드</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/watflix/img/vod_list_thumb_05.jpg" alt=""></a>
+                                    <div>
+                                        <div>
+                                            <span>콘텐츠명</span>
+                                            <span> | 에피소드</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div>
+                <div class="notice">
+                    <table border="0">
+                        <tr>
+                            <td><a href="#">공지사항</a></td>
+                            <td><a href="#">공지사항 제목</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="sitemap">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">서비스소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <img src="/ottving/img/ottving_logo.png" alt="logo">
+                    <p>
+                        OTTVING 주식회사 | 대표이사 이태현 ​</br>
+                        고객센터 1599-3709 (평일 09:00~18:00 / 점심시간 12:00~13:00 / 주말 및 공휴일 휴무)​ </br>
+                        사업자등록번호 220-88-38020 | 통신판매업 신고번호 : 제 2015-서울마포-0128호​ </br>
+                        통신판매업 정보 공개 : http://www.ftc.go.kr/bizCommPop.do?wrkr_no=220-88-38020​ </br>
+                        주소 서울특별시 마포구 상암산로 82, SBS 프리즘 타워 14층 | 전자우편주소 : helpdesk@wavve.com </br>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
